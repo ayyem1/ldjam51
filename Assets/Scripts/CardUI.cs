@@ -17,7 +17,7 @@ public class CardUI : MonoBehaviour
     public Card Data { get; set; }
     public bool IsEmpty => Data == null;
 
-    public void Initialize(Card data)
+    public void InitializeForDeckBuilder(Card data)
     {
         Data = data;
         Title.gameObject.SetActive(!IsEmpty);
@@ -32,7 +32,7 @@ public class CardUI : MonoBehaviour
         }
     }
 
-    public void InitializeCard(Card refCard)
+    public void InitializeCardForBattle(Card refCard)
     {
         this.refCard = refCard;
         battleScene_cardName.text = refCard.Title;

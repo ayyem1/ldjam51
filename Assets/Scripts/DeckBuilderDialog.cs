@@ -11,22 +11,22 @@ public class DeckBuilderDialog : MonoBehaviour
         var i = 0;
         for (; i < playerCards.Count; i++)
         {
-            CardsInDeck[i].Initialize(playerCards[i]);
+            CardsInDeck[i].InitializeForDeckBuilder(playerCards[i]);
         }
         for (; i < CardsInDeck.Length; i++)
         {
-            CardsInDeck[i].Initialize(null);
+            CardsInDeck[i].InitializeForDeckBuilder(null);
         }
 
         var reserveCards = GameInstance.Instance.MainPlayer.ReserveCards;
         i = 0;
         for (; i < reserveCards.Count; i++)
         {
-            CardsInReserve[i].Initialize(reserveCards[i]);
+            CardsInReserve[i].InitializeForDeckBuilder(reserveCards[i]);
         }
         for (; i < CardsInReserve.Length; i++)
         {
-            CardsInReserve[i].Initialize(null);
+            CardsInReserve[i].InitializeForDeckBuilder(null);
         }
     }
     public void OnBackButtonPressed()

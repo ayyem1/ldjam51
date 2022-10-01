@@ -33,7 +33,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
         // Set drag container canvas group params
         DraggedCardUI.gameObject.transform.position = initialPosition;
-        DraggedCardUI.Initialize(cardUI.Data);
+        DraggedCardUI.InitializeForDeckBuilder(cardUI.Data);
         DraggedCardUI.gameObject.SetActive(true);
 
         // Disable icon on mergeable item.
@@ -57,7 +57,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
     private void Reset()
     {
-        cardUI.Initialize(DraggedCardUI.Data);
+        cardUI.InitializeForDeckBuilder(DraggedCardUI.Data);
         //cardUI.imageIcon.sprite = DraggedCardUI.sprite;
         //cardUI.imageIcon.color = Color.white;
         ResetDragContainer();

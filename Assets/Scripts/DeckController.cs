@@ -29,7 +29,7 @@ public class DeckController: MonoBehaviour
         {
             CardUI card = Instantiate<CardUI>(cardPrefab, cardContainerTransform);
             Card nextCard = randomizedDeck.ElementAt(i);
-            card.InitializeCard(nextCard);
+            card.InitializeCardForBattle(nextCard);
         }
         
     }
