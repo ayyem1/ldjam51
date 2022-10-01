@@ -6,12 +6,12 @@ public class ActionCardUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textMeshPro;
     [SerializeField] private Sprite icon;
     [SerializeField] private GameObject selectedGameObject;
-    private BaseAction baseAction;
+    private Entity baseAction;
 
-    public void SetBaseAction(BaseAction baseAction)
+    public void SetBaseAction(Entity baseAction)
     {
         this.baseAction = baseAction;
-        textMeshPro.text = baseAction.GetActionName().ToUpper();
+        //textMeshPro.text = baseAction.GetActionName().ToUpper();
 
         //button.onClick.AddListener(() =>{
         //    UnitActionSystem.Instance.SetSelectedAction(baseAction);
@@ -20,7 +20,7 @@ public class ActionCardUI : MonoBehaviour
 
     public void UpdateSelectedVisual()
     {
-        BaseAction selectedBaseAction = UnitActionSystem.Instance.GetSelectedAction();
+        Entity selectedBaseAction = UnitActionSystem.Instance.GetSelectedAction();
         selectedGameObject.SetActive(selectedBaseAction == baseAction);
     }
 }

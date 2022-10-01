@@ -11,7 +11,7 @@ public class UnitActionSystem : MonoBehaviour
     public event EventHandler OnActionStarted;
     //[SerializeField] private Unit selectedUnit;
     [SerializeField] private LayerMask unitLayerMask;
-    private BaseAction selectedAction;
+    private Entity selectedAction;
     private bool isBusy;
 
     private void Awake()
@@ -61,7 +61,7 @@ public class UnitActionSystem : MonoBehaviour
             */
             
             SetBusy();
-            selectedAction.TakeAction(ClearBusy);
+            //selectedAction.TakeAction(ClearBusy);
 
             OnActionStarted?.Invoke(this,EventArgs.Empty);            
         }
@@ -99,13 +99,13 @@ public class UnitActionSystem : MonoBehaviour
         return false;
     }
 
-    public void SetSelectedAction(BaseAction baseAction)
+    public void SetSelectedAction(Entity baseAction)
     {
         selectedAction = baseAction;
         OnSelectedActionChanged?.Invoke(this,EventArgs.Empty);
     }
 
-    public BaseAction GetSelectedAction()
+    public Entity GetSelectedAction()
     {
         return selectedAction;
     }

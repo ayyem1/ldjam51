@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     
     private State state;
     private float enemyTimer;
-
+    
     private void Awake()
     {
         state = State.WaitingForEnemyTurn;
@@ -70,5 +70,4 @@ public class EnemyAI : MonoBehaviour
             enemyTimer = 2f;
         }
     }
-
 }
