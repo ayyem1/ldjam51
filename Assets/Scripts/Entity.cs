@@ -6,6 +6,7 @@ public class Entity : ScriptableObject
 {
     public string Name;
     public string Dialog;
+    public int numEnemies;
     [Min(0f)] public float StartingHp;
     [Min(1f)] public float MaxHp;
 

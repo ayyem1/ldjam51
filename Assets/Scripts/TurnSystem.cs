@@ -33,6 +33,7 @@ public class TurnSystem : MonoBehaviour
     {
         turnNumber++;
         isPlayerTurn = !isPlayerTurn;
+        timer.stopTimer();
         if (isPlayerTurn)
         {
             timer.setTimer();

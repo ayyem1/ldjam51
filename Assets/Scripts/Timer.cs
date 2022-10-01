@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     public UnityEvent OnTimerStop;
     [SerializeField] private TextMeshProUGUI timerText;
     private float sceneTimer = 10.0f;
-    private bool isTimerActive = false;
+    private bool isTimerActive = true;
 
     private void Start()
     {
@@ -43,5 +43,10 @@ public class Timer : MonoBehaviour
     {
         isTimerActive = true;
         sceneTimer = 10.0f;
+        timerText.color = Color.white;
+    }
+    public void stopTimer()
+    {
+        isTimerActive = false;
     }
 }
