@@ -5,12 +5,13 @@ public class Player : MonoBehaviour
 {
     [Min(0f)] [SerializeField] private float startingHp;
     [Min(1f)] [SerializeField] private float maxHp;
-    [Min(0f)] [SerializeField] private float startingCorporateBucksAmount;
+    [Min(0f)] [SerializeField] private int startingCorporateBucksAmount;
     [SerializeField] private Card[] startingCards;
 
     public string Name { get; set; }
     public float CurrentHp { get; set; }
-    public float CurrentCorporateBucksAmount { get; set; }
+    public string HpDisplayText { get { return $"{CurrentHp}/{maxHp}"; } }
+    public int CurrentCorporateBucksAmount { get; set; }
     public List<Card> OwnedCards { get; set; } = new List<Card>();
     public List<Card> CardsInDeck { get; set; } = new List<Card>();
 

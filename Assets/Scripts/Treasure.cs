@@ -5,6 +5,6 @@ public class Treasure : ScriptableObject
 {
     public string Name;
     public string Description;
-    public float GrantedCorporateBucks;
+    public int GrantedCorporateBucks;
     public Card[] GrantedCards;
 }

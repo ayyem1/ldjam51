@@ -11,7 +11,7 @@ public class SpecialArea : ScriptableObject
 
     public string Name;
     public AreaType Type;
-    public float HealingAmount;
-    public float HealingPrice;
+    [Min(0f)] public float HealingAmount;
+    [Min(0f)] public int HealingPrice;
     // TODO: Items to purchase.
 }
