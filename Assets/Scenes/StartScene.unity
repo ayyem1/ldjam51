@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &402270940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 25752311480078726, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
+  m_PrefabInstance: {fileID: 25752311818124122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +783,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0bc89fba8efc4419b9d180cce86da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1884040975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1884040976}
+  - component: {fileID: 1884040977}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1884040976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884040975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 402270940}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1884040977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884040975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d365901db91f2ca47ab6584974fbaa88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHp: 60
+  maxHp: 60
+  startingCorporateBucksAmount: 10
+  startingCards: []
 --- !u!1 &1891762053
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,7 +882,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1920, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -935,5 +988,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
+      propertyPath: MainPlayer
+      value: 
+      objectReference: {fileID: 1884040977}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
