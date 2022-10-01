@@ -1,13 +1,25 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public string Name;
-    public float StartingHp;
-    public float StartingCorporateBucks;
-    public Card[] StartingCards;
+    [Min(0f)] [SerializeField] private float startingHp;
+    [Min(1f)] [SerializeField] private float maxHp;
+    [Min(0f)] [SerializeField] private float startingCorporateBucksAmount;
+    [SerializeField] private Card[] startingCards;
+
+    public string Name { get; set; }
     public float CurrentHp { get; set; }
-    public float CorporateBucksAmount { get; set; }
-    public Card[] OwnedCards { get; set; }
-    public Card[] CardsInDeck { get; set; }
+    public float CurrentCorporateBucksAmount { get; set; }
+    public List<Card> OwnedCards { get; set; } = new List<Card>();
+    public List<Card> CardsInDeck { get; set; } = new List<Card>();
+
+    public void InitializePlayer()
+    {
+        Name = "New Guy"; // TODO: Ask user for name.
+        CurrentHp = startingHp;
+        CurrentCorporateBucksAmount = startingCorporateBucksAmount;
+        OwnedCards.AddRange(startingCards);
+        CardsInDeck.AddRange(startingCards);
+    }
 }
