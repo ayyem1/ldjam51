@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a6111a140d47bd489af0eec0c1fcee2, type: 3}
-  m_Name: AsPerMyLastEmail
+  m_Name: ScheduledAMeeting
   m_EditorClassIdentifier: 
-  Title: As Per my Last Email
-  Description: As Per my Last Email
+  Title: Scheduled A Meeting
+  Description: No Idea What To Do? Schedule a Meeting. No one has ever said "This
+    meeting should be an email".
   Icon: {fileID: 0}
-  AttackDamage: 0
-  DefenseIncrease: 3
-  Buffs:
-  - ShouldUseOnEnemy: 0
-    AttackModification: 0
-    DefenseModification: 0
-  - ShouldUseOnEnemy: 0
-    AttackModification: 0
-    DefenseModification: 0
+  AttackDamage: 3
+  DefenseIncrease: 0
+  Buffs: []

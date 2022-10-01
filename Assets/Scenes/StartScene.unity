@@ -830,7 +830,16 @@ MonoBehaviour:
   startingHp: 60
   maxHp: 60
   startingCorporateBucksAmount: 10
-  startingCards: []
+  startingCards:
+  - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}
+  - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}
+  - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}
+  - {fileID: 11400000, guid: a216f6362114d5e42bd15417c235e50a, type: 2}
+  - {fileID: 11400000, guid: a216f6362114d5e42bd15417c235e50a, type: 2}
+  - {fileID: 11400000, guid: a216f6362114d5e42bd15417c235e50a, type: 2}
+  - {fileID: 11400000, guid: ec4339e8cd6fd5d46b5d42e543cd0c67, type: 2}
+  - {fileID: 11400000, guid: ec4339e8cd6fd5d46b5d42e543cd0c67, type: 2}
+  - {fileID: 11400000, guid: ec4339e8cd6fd5d46b5d42e543cd0c67, type: 2}
 --- !u!1 &1891762053
 GameObject:
   m_ObjectHideFlags: 0
