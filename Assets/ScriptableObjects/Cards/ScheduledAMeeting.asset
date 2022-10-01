@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: No Idea What To Do? Schedule a Meeting. No one has ever said "This
     meeting should be an email".
   Icon: {fileID: 0}
-  AttackDamage: 3
-  DefenseIncrease: 0
+  cardActionType: 0
+  cardValue: 3
   Buffs: []

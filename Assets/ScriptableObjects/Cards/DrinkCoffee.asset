@@ -15,8 +15,8 @@ MonoBehaviour:
   Title: Drink Coffee
   Description: Power up with some Coffee
   Icon: {fileID: 0}
-  AttackDamage: 0
-  DefenseIncrease: 0
+  cardActionType: 2
+  cardValue: 1
   Buffs:
   - ShouldUseOnEnemy: 0
     AttackModification: 0

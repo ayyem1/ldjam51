@@ -36,6 +36,7 @@ public class CardUI : MonoBehaviour
     {
         this.refCard = refCard;
         battleScene_cardName.text = refCard.Title;
+        battleScene_cardValue.text = refCard.cardActionType.ToString() + ": " +refCard.cardValue;
         battleScene_cardIcon.sprite = refCard.Icon;
     }
 

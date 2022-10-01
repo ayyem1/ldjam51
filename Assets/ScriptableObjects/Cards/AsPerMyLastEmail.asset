@@ -15,12 +15,6 @@ MonoBehaviour:
   Title: As Per my Last Email
   Description: As Per my Last Email
   Icon: {fileID: 0}
-  AttackDamage: 0
-  DefenseIncrease: 3
-  Buffs:
-  - ShouldUseOnEnemy: 0
-    AttackModification: 0
-    DefenseModification: 0
-  - ShouldUseOnEnemy: 0
-    AttackModification: 0
-    DefenseModification: 0
+  cardActionType: 1
+  cardValue: 3
+  Buffs: []
