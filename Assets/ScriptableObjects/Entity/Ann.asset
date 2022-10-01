@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
+  m_Name: Ann
+  m_EditorClassIdentifier: 
+  Name: Ann From Accounting
+  Dialog: Where are your invoices?
+  battleSprite: {fileID: 0}
+  StartingHp: 50
+  MaxHp: 50
+  AttackDamage: 3
+  Defense: 4
+  Buffs: []
+  movePattern:
+  - Attack
+  - Defend
+  - Defend
+  movePatternValues: 030000000400000004000000
+  minions:
+  - {fileID: 11400000}
+  - {fileID: 11400000}
