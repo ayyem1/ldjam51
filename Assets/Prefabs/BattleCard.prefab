@@ -226,9 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadd6924347421d418c103e126ad476c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: {fileID: 6785578516709190896}
-  cardValue: {fileID: 8455947623707188661}
-  cardIcon: {fileID: 6704071828017282510}
+  Title: {fileID: 0}
+  Icon: {fileID: 0}
+  Description: {fileID: 0}
+  battleScene_cardName: {fileID: 6785578516709190896}
+  battleScene_cardValue: {fileID: 8455947623707188661}
+  battleScene_cardIcon: {fileID: 6704071828017282510}
 --- !u!1 &7626384253337107755
 GameObject:
   m_ObjectHideFlags: 0
