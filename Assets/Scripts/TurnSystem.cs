@@ -9,6 +9,7 @@ public class TurnSystem : MonoBehaviour
     public event EventHandler OnTurnChanged;
     private int turnNumber = 1;
     private bool isPlayerTurn = true;
+    [SerializeField] Timer timer;
 
     private void Awake()
     {
@@ -19,12 +20,23 @@ public class TurnSystem : MonoBehaviour
             return;
         }
         Instance = this;
+
+        timer.OnTimerStop.RemoveListener(NextTurn);
+        timer.OnTimerStop.AddListener(NextTurn);
     }
 
+    private void OnDestroy()
+    {
+        timer.OnTimerStop.RemoveListener(NextTurn);
+    }
     public void NextTurn()
     {
         turnNumber++;
         isPlayerTurn = !isPlayerTurn;
+        if (isPlayerTurn)
+        {
+            timer.setTimer();
+        }
 
         OnTurnChanged?.Invoke(this, EventArgs.Empty);
     }

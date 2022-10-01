@@ -7,7 +7,7 @@ using TMPro;
 public class ActionCardUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textMeshPro;
-    [SerializeField] private Button button;
+    [SerializeField] private Sprite icon;
     [SerializeField] private GameObject selectedGameObject;
     private BaseAction baseAction;
 
@@ -16,9 +16,9 @@ public class ActionCardUI : MonoBehaviour
         this.baseAction = baseAction;
         textMeshPro.text = baseAction.GetActionName().ToUpper();
 
-        button.onClick.AddListener(() =>{
-            UnitActionSystem.Instance.SetSelectedAction(baseAction);
-        });
+        //button.onClick.AddListener(() =>{
+        //    UnitActionSystem.Instance.SetSelectedAction(baseAction);
+        //});
     }
 
     public void UpdateSelectedVisual()
