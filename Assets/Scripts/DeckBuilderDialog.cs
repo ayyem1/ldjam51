@@ -2,33 +2,27 @@ using UnityEngine;
 
 public class DeckBuilderDialog : MonoBehaviour
 {
-    [SerializeField] private CardUI[] CardsInDeck;
-    [SerializeField] private CardUI[] CardsInReserve;
+    [SerializeField] private CardUI CardPrefab;
+    [SerializeField] private Transform deckContentRoot;
+    [SerializeField] private Transform reserveContentRoot;
 
     private void Start()
     {
         var playerCards = GameInstance.Instance.MainPlayer.CardsInDeck;
-        var i = 0;
-        for (; i < playerCards.Count; i++)
+        foreach(var card in playerCards)
         {
-            CardsInDeck[i].InitializeForDeckBuilder(playerCards[i]);
-        }
-        for (; i < CardsInDeck.Length; i++)
-        {
-            CardsInDeck[i].InitializeForDeckBuilder(null);
+            var cardUI = Instantiate<CardUI>(CardPrefab, deckContentRoot);
+            cardUI.InitializeForDeckBuilder(card);
         }
 
         var reserveCards = GameInstance.Instance.MainPlayer.ReserveCards;
-        i = 0;
-        for (; i < reserveCards.Count; i++)
+        foreach (var card in reserveCards)
         {
-            CardsInReserve[i].InitializeForDeckBuilder(reserveCards[i]);
-        }
-        for (; i < CardsInReserve.Length; i++)
-        {
-            CardsInReserve[i].InitializeForDeckBuilder(null);
+            var cardUI = Instantiate<CardUI>(CardPrefab, deckContentRoot);
+            cardUI.InitializeForDeckBuilder(card);
         }
     }
+
     public void OnBackButtonPressed()
     {
         gameObject.SetActive(false);
