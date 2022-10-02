@@ -15,19 +15,15 @@ public class DeckController: MonoBehaviour
     public List<Card> cardsInHand = new List<Card>();
     public List<Card> cardsInDiscard = new List<Card>();
 
-    private void Start()
-    {
-        CreateHand();
-    }
-    private void CreateHand()
+    public void CreateHand()
     {
         foreach (Transform cardTransform in cardContainerTransform)
         {
             Destroy(cardTransform.gameObject);
         }
-        
-        List<Card> startingDeck = GameInstance.Instance.MainPlayer.CardsInDeck;
-        currentDeck = ShuffleDeck(startingDeck);
+
+        currentDeck = new List<Card>();
+        currentDeck.AddRange(ShuffleDeck(GameInstance.Instance.MainPlayer.CardsInDeck));
 
         for(int i = 0; i <= 3; i++)
         {
@@ -58,8 +54,8 @@ public class DeckController: MonoBehaviour
 
     public void ShuffleDiscardPile()
     {
-        currentDeck.AddRange(cardsInDiscard);
-        currentDeck = ShuffleDeck(currentDeck);
+        currentDeck.Clear();
+        currentDeck.AddRange(ShuffleDeck(cardsInDiscard));
     }
 
     public List<Card> ShuffleDeck(List<Card> deck)
