@@ -36,32 +36,38 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
     {
         Player mainPlayer = GameInstance.Instance.MainPlayer;
         mainPlayer.ReduceMana(1); // We currently assume each card played requires 1 mana.
-
-        if (cardToPlay.cardActionType == Card.ActionType.Attack)
+        Card.ActionType actionName = cardToPlay.cardActionType;
+        switch(actionName)
         {
-            enemyUI.GetEnemy().Damage(cardToPlay.cardValue + mainPlayer.BuffDamageAmount);
+            case Card.ActionType.Attack:
+                enemyUI.GetEnemy().Damage(cardToPlay.cardValue + mainPlayer.BuffDamageAmount);
+                GameManager.Instance.CreatePopUp(cardToPlay.cardValue + mainPlayer.BuffDamageAmount, actionName);
+                break;
+            case Card.ActionType.Defense:
+                mainPlayer.ModifyDefense(cardToPlay.cardValue + mainPlayer.BuffDefenseAmount);
+                GameManager.Instance.CreatePopUp(cardToPlay.cardValue + mainPlayer.BuffDefenseAmount, actionName);
+                break;
+            case Card.ActionType.BuffAttack:
+                mainPlayer.BuffDamage(cardToPlay.cardValue);
+                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                break;
+            case Card.ActionType.BuffDefense:
+                mainPlayer.BuffDefense(cardToPlay.cardValue);
+                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                break;
+            case Card.ActionType.DebuffAttack:
+                enemyUI.GetEnemy().BuffDamage(-cardToPlay.cardValue);
+                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                break;
+            case Card.ActionType.DebuffDefense:
+                enemyUI.GetEnemy().BuffDefense(-cardToPlay.cardValue);
+                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                break;
+            default:
+                Debug.LogError("Wrong Action Type");
+                break;
         }
-        else if (cardToPlay.cardActionType == Card.ActionType.Defense)
-        {
-            mainPlayer.ModifyDefense(cardToPlay.cardValue + mainPlayer.BuffDefenseAmount);
-        }
-        else if (cardToPlay.cardActionType == Card.ActionType.BuffAttack)
-        {
-            mainPlayer.BuffDamage(cardToPlay.cardValue);
-        }
-        else if (cardToPlay.cardActionType == Card.ActionType.BuffDefense)
-        {
-            mainPlayer.BuffDefense(cardToPlay.cardValue);
-        }
-        else if (cardToPlay.cardActionType == Card.ActionType.DebuffAttack)
-        {
-            enemyUI.GetEnemy().BuffDamage(-cardToPlay.cardValue);
-        }
-        else if (cardToPlay.cardActionType == Card.ActionType.DebuffDefense)
-        {
-            enemyUI.GetEnemy().BuffDefense(-cardToPlay.cardValue);
-        }
-
+        
         // Draw Next Card
         GameManager.Instance.DeckController.DrawCard();
 
@@ -69,7 +75,6 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
         // Then damage enemy, place card in discard pile, draw next card, destroy card
         if(GameInstance.Instance.MainPlayer.GetMana() == 0)
         {
-            mainPlayer.ResetBuffs();
             TurnSystem.Instance.NextTurn();
         }
     }

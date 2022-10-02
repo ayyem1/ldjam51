@@ -9,6 +9,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private EnemyAI enemyAI;
     [SerializeField] private Timer timer;
     [SerializeField] private CardUI draggedCardUI;
+    [SerializeField] private Transform popUpTransform;
+    [SerializeField] private Sprite[] spriteArray;
+    private Sprite sprite;
 
     public DeckController DeckController;
 
@@ -30,5 +33,37 @@ public class GameManager : Singleton<GameManager>
         // TODO: Insert dialog.
 
         timer.SetTimer();
+    }
+
+    public PopUpAction CreatePopUp(float valueAmount, Card.ActionType actionType)
+    {
+        switch(actionType)
+        {
+            case Card.ActionType.Attack:
+                sprite = spriteArray[0];
+                break;
+            case Card.ActionType.Defense:
+                sprite = spriteArray[1];
+                break;
+            case Card.ActionType.BuffAttack:
+                sprite = spriteArray[2];
+                break;
+            case Card.ActionType.BuffDefense:
+                sprite = spriteArray[3];
+                break;
+            case Card.ActionType.DebuffAttack:
+                sprite = spriteArray[4];
+                break;
+            case Card.ActionType.DebuffDefense:
+                sprite = spriteArray[5];
+                break;
+            default:
+                Debug.LogError("Wrong Action Type");
+                break;
+        }
+        
+        PopUpAction popUpAction = popUpTransform.GetComponent<PopUpAction>();
+        popUpAction.Setup(valueAmount, sprite);
+        return popUpAction;
     }
 }

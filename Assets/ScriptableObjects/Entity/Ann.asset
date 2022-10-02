@@ -24,5 +24,5 @@ MonoBehaviour:
   StartingDefenseBuff: 2
   StartingAttackDebuff: 2
   StartingDefenseDebuff: 2
-  movePattern: 040000000300000000000000
+  movePattern: 000000000000000000000000
   minions: []

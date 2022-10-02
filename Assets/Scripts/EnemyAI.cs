@@ -50,30 +50,34 @@ public class EnemyAI : MonoBehaviour
         //Reset Defense
         enemy.ResetDefense();
         //Get Pattern
-        Entity.ActionType actionName = enemy.Data.movePattern[enemy.CurrentPatternIndex];
+        Card.ActionType actionName = enemy.Data.movePattern[enemy.CurrentPatternIndex];
         //Take action
         Debug.Log("Action: " + actionName);
         
         switch(actionName)
         {
-            case Entity.ActionType.Attack:
+            case Card.ActionType.Attack:
                 GameInstance.Instance.MainPlayer.Damage(enemy.CurrentDamageValue);
+                GameManager.Instance.CreatePopUp(enemy.CurrentDamageValue, actionName);
                 enemy.ResetBuffs();
                 break;
-            case Entity.ActionType.Defense:
+            case Card.ActionType.Defense:
                 enemy.ModifyDefense(enemy.CurrentDefenseIncrementValue);
+                GameManager.Instance.CreatePopUp(enemy.CurrentDamageValue, actionName);
                 enemy.ResetBuffs();
                 break;
-            case Entity.ActionType.BuffAttack:
+            case Card.ActionType.BuffAttack:
                 enemy.BuffDamage(enemy.DamageBuffAmount);
+                GameManager.Instance.CreatePopUp(enemy.DamageBuffAmount, actionName);
                 break;
-            case Entity.ActionType.BuffDefense:
+            case Card.ActionType.BuffDefense:
                 enemy.BuffDefense(enemy.DefenseBuffAmount);
+                GameManager.Instance.CreatePopUp(enemy.DefenseBuffAmount, actionName);
                 break;
-            case Entity.ActionType.DebuffAttack:
+            case Card.ActionType.DebuffAttack:
                 GameInstance.Instance.MainPlayer.BuffDamage(-enemy.DebuffDamageAmount);
                 break;
-            case Entity.ActionType.DebuffDefense:
+            case Card.ActionType.DebuffDefense:
                 GameInstance.Instance.MainPlayer.BuffDefense(-enemy.DebuffDefenseAmount);
                 break;
             default:

@@ -24,7 +24,7 @@ public class Enemy
     public void Damage(float damageValue)
     {
         float diff = damageValue - CurrentDefense;
-        if (damageValue < 0)
+        if (diff < 0)
         {
             ModifyDefense(diff);
         }

@@ -21,15 +21,6 @@ public class Entity : ScriptableObject
     public float StartingAttackDebuff;
     public float StartingDefenseDebuff;
 
-    public enum ActionType
-    {
-        Attack,
-        Defense,
-        BuffAttack,
-        BuffDefense,
-        DebuffAttack,
-        DebuffDefense
-    }
-    public List<ActionType> movePattern;
+    public List<Card.ActionType> movePattern;
     public Entity[] minions;    
 }
