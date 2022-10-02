@@ -49,6 +49,7 @@ public class DeckController: MonoBehaviour
         {
             DrawCard();
         }
+        UpdateDeckText();
     }
 
     public void DrawCard()
@@ -66,6 +67,7 @@ public class DeckController: MonoBehaviour
 
         CardsInHand.Add(nextCard);
         currentDeck.Remove(nextCard);
+        UpdateDeckText();
     }
 
     public void UseCard(CardUI cardUI, Card card)
@@ -73,6 +75,7 @@ public class DeckController: MonoBehaviour
         CardsInDiscard.Add(card);
         CardsInHand.Remove(card);
         Destroy(cardUI.gameObject);
+        UpdateDeckText();
     }
 
     public void ShuffleDiscardPile()
@@ -81,6 +84,7 @@ public class DeckController: MonoBehaviour
         CardsInDiscard.AddRange(currentDeck);  
         currentDeck.AddRange(ShuffleDeck(CardsInDiscard));
         CardsInDiscard.Clear();
+        UpdateDeckText();
     }
 
     public List<Card> ShuffleDeck(List<Card> deck)

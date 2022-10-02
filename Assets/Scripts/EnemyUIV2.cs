@@ -30,8 +30,10 @@ public class EnemyUIV2 : MonoBehaviour
         refEnemy.CurrentDefense = refEnemy.Data.StartingDefense;
         refEnemy.CurrentDamageValue = refEnemy.Data.StartingDamageValue;
         refEnemy.CurrentDefenseIncrementValue = refEnemy.Data.StartingDefenseIncrementValue;
-        refEnemy.DamageMultiplier = refEnemy.Data.StartingAttackMultplier;
-        refEnemy.DefenseMultiplier = refEnemy.Data.StartingDefenseMultiplier;
+        refEnemy.DamageBuffAmount = refEnemy.Data.StartingAttackBuff;
+        refEnemy.DefenseBuffAmount = refEnemy.Data.StartingDefenseBuff;
+        refEnemy.DebuffDamageAmount = refEnemy.Data.StartingAttackDebuff;
+        refEnemy.DebuffDefenseAmount = refEnemy.Data.StartingDefenseDebuff;
 
         isInitialized = true;
     }

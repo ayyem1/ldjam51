@@ -20,9 +20,9 @@ MonoBehaviour:
   StartingDefense: 0
   StartingDamageValue: 3
   StartingDefenseIncrementValue: 3
-  StartingAttackMultplier: 3
-  StartingDefenseMultiplier: 3
-  movePattern: 020000000000000000000000030000000100000001000000
-  minions:
-  - {fileID: 11400000}
-  - {fileID: 11400000}
+  StartingAttackBuff: 2
+  StartingDefenseBuff: 2
+  StartingAttackDebuff: 2
+  StartingDefenseDebuff: 2
+  movePattern: 040000000300000000000000
+  minions: []

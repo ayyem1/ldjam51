@@ -34,26 +34,43 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
 
     private void PlayCard(Card cardToPlay)
     {
-        GameInstance.Instance.MainPlayer.ReduceMana(1); // We currently assume each card played requires 1 mana.
+        Player mainPlayer = GameInstance.Instance.MainPlayer;
+        mainPlayer.ReduceMana(1); // We currently assume each card played requires 1 mana.
 
         if (cardToPlay.cardActionType == Card.ActionType.Attack)
         {
-            enemyUI.GetEnemy().Damage(cardToPlay.cardValue);
+            enemyUI.GetEnemy().Damage(cardToPlay.cardValue + mainPlayer.BuffDamageAmount);
         }
         else if (cardToPlay.cardActionType == Card.ActionType.Defense)
         {
-            GameInstance.Instance.MainPlayer.ModifyDefense(cardToPlay.cardValue);
+            mainPlayer.ModifyDefense(cardToPlay.cardValue + mainPlayer.BuffDefenseAmount);
         }
-        else if (cardToPlay.cardActionType == Card.ActionType.Buff)
+        else if (cardToPlay.cardActionType == Card.ActionType.BuffAttack)
         {
-            // Add Buff Logic
+            mainPlayer.BuffDamage(cardToPlay.cardValue);
+        }
+        else if (cardToPlay.cardActionType == Card.ActionType.BuffDefense)
+        {
+            mainPlayer.BuffDefense(cardToPlay.cardValue);
+        }
+        else if (cardToPlay.cardActionType == Card.ActionType.DebuffAttack)
+        {
+            enemyUI.GetEnemy().BuffDamage(-cardToPlay.cardValue);
+        }
+        else if (cardToPlay.cardActionType == Card.ActionType.DebuffDefense)
+        {
+            enemyUI.GetEnemy().BuffDefense(-cardToPlay.cardValue);
         }
 
-        // Place Card in Discard Pile
-        // Destroy Card Object
         // Draw Next Card
+        GameManager.Instance.DeckController.DrawCard();
 
         // If object is dropped on an enemy and is an attack
         // Then damage enemy, place card in discard pile, draw next card, destroy card
+        if(GameInstance.Instance.MainPlayer.GetMana() == 0)
+        {
+            mainPlayer.ResetBuffs();
+            TurnSystem.Instance.NextTurn();
+        }
     }
 }
