@@ -1,13 +1,14 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class EnemyUI : MonoBehaviour
+public class EnemyUIV2 : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI enemyName;
     [SerializeField] private TextMeshProUGUI health;
     [SerializeField] private TextMeshProUGUI defense;
     [SerializeField] private Image enemyIcon;
+
     private Enemy refEnemy;
     private bool isInitialized;
 
@@ -37,7 +38,7 @@ public class EnemyUI : MonoBehaviour
 
     public void UpdateEntityVisual()
     {
-        defense.text =  refEnemy.CurrentDefense.ToString();
+        defense.text = refEnemy.CurrentDefense.ToString();
         health.text = $"{refEnemy.CurrentHp}/{refEnemy.Data.MaxHp}";
         enemyName.text = refEnemy.Data.Name;
     }

@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d858c3d0dc6e994396eb85fe9461b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2197693239132866917, guid: 7b4f3f380ac3c0f42a2c839d32e982f2, type: 3}
+  enemyPrefab: {fileID: 3277299620067254830, guid: 7b4f3f380ac3c0f42a2c839d32e982f2, type: 3}
   enemyContainerTransform: {fileID: 1061328591}
 --- !u!1 &1218627339
 GameObject:

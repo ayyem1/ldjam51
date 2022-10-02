@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class EnemyCardDrop : MonoBehaviour, IDropHandler
 {
-    [SerializeField] private EnemyUI enemyUI;
+    [SerializeField] private EnemyUIV2 enemyUI;
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag == null)

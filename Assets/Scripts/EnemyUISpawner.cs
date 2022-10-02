@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyUISpawner : MonoBehaviour
 {
-    [SerializeField] private EnemyUI enemyPrefab;
+    [SerializeField] private EnemyUIV2 enemyPrefab;
     [SerializeField] private Transform enemyContainerTransform;
 
     public void SpawnEnemyUI(List<Enemy> enemies)
@@ -15,7 +15,7 @@ public class EnemyUISpawner : MonoBehaviour
 
         foreach (Enemy enemy in enemies)
         {
-            EnemyUI enemyEntityUI = Instantiate<EnemyUI>(enemyPrefab, enemyContainerTransform);
+            EnemyUIV2 enemyEntityUI = Instantiate<EnemyUIV2>(enemyPrefab, enemyContainerTransform);
             enemyEntityUI.Initialize(enemy);
         }
     }
