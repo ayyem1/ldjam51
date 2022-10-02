@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -27,5 +25,4 @@ public class EntityUI : MonoBehaviour
         defense.text = refEntity.CurrentDefense.ToString();
         health.text = $"{refEntity.CurrentHp}/{refEntity.MaxHp}";
     }
-
 }

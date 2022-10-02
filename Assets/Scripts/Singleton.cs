@@ -22,22 +22,27 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
             lock (singletonLock)
             {
-                instance = (T)FindObjectOfType(typeof(T));
-                if (FindObjectsOfType(typeof(T)).Length > 1)
+                if (instance != null)
+                {
+                    return instance;
+                }
+
+                instance = null;
+                var instances = FindObjectsOfType(typeof(T));
+                if (instances.Length > 1)
                 {
                     Debug.LogError("[Singleton] Something went really wrong. There should never be more than 1 singleton! Reopening the scene might fix it.");
                     return instance;
                 }
-
-                if (instance == null)
+                else if (instances.Length == 1)
+                {
+                    instance = (T)instances[0];
+                }
+                else
                 {
                     GameObject singleton = new GameObject();
                     instance = singleton.AddComponent<T>();
                     singleton.name = $"(singleton) {typeof(T).ToString()}";
-                }
-                else
-                {
-                    Debug.Log($"[Singleton] Using instance already created {instance.gameObject.name}");
                 }
 
                 return instance;

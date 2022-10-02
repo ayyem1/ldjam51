@@ -728,7 +728,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -830,6 +830,8 @@ MonoBehaviour:
   startingHp: 60
   maxHp: 60
   startingCorporateBucksAmount: 10
+  minNumCardsInDeck: 8
+  maxNumCardsInDeck: 30
   startingCards:
   - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}
   - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}

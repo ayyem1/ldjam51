@@ -9,10 +9,16 @@ public class CardUI : MonoBehaviour
     [SerializeField] private TMP_Text Title;
     [SerializeField] private Image Icon;
     [SerializeField] private TMP_Text Description;
+
     [SerializeField] private TextMeshProUGUI battleScene_cardName;
     [SerializeField] private TextMeshProUGUI battleScene_cardValue;
     [SerializeField] private Image battleScene_cardIcon;
+
+
     private Card refCard;
+
+    public Image Background;
+    public Image Border;
 
     public Card Data { get; set; }
     public bool IsEmpty => Data == null;

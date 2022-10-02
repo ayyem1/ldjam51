@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5883933632878636118}
   - component: {fileID: 7471091154307459097}
   - component: {fileID: 3401812083433911676}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 960132874839130497}
   - component: {fileID: 8790080954833117810}
   - component: {fileID: 3046662878036296266}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 4934608221087099607}
   - component: {fileID: 8464459738317818319}
   - component: {fileID: 1180773266534624014}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 7252750760519713787}
   - component: {fileID: 9211564806125160477}
   - component: {fileID: 4618954368362597732}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.55
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -416,7 +416,8 @@ GameObject:
   - component: {fileID: 1583061454282075948}
   - component: {fileID: 4368233894401681195}
   - component: {fileID: 4689816223733265349}
-  m_Layer: 0
+  - component: {fileID: 3939741806216566573}
+  m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,6 +473,21 @@ MonoBehaviour:
   battleScene_cardName: {fileID: 0}
   battleScene_cardValue: {fileID: 0}
   battleScene_cardIcon: {fileID: 0}
+  Background: {fileID: 3401812083433911676}
+  Border: {fileID: 1180773266534624014}
+--- !u!114 &3939741806216566573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944682808140156080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e668a1d6b96420547a77aa1406b5407c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardUIData: {fileID: 4689816223733265349}
 --- !u!1 &6990241312049061120
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3797802827482770733}
   - component: {fileID: 3731366531843446920}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Layout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +566,7 @@ GameObject:
   - component: {fileID: 2600429591144545912}
   - component: {fileID: 1681579557764470455}
   - component: {fileID: 7140228412293992941}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Description
+  m_text: My simple description that's a few words long maybe two more.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -632,7 +648,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.9
+  m_fontSize: 10
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -687,10 +703,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 20
+  m_MinWidth: 50
   m_MinHeight: -1
-  m_PreferredWidth: 50
-  m_PreferredHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 60
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
