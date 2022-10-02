@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -16,5 +14,4 @@ public class EntityUI : MonoBehaviour
         health.text = $"{refEntity.StartingHp}/{refEntity.MaxHp}";
         enemyIcon.sprite = refEntity.BattleSprite;
     }
-
 }

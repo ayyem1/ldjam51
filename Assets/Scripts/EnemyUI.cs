@@ -1,15 +1,10 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class EnemyUI : MonoBehaviour
 {
     [SerializeField] private EntityUI enemyPrefab;
     [SerializeField] private Transform enemyContainerTransform;
-    [SerializeField] private Entity currentEntity;
     private List<Entity> spawnEntities;
 
     private void Start()
@@ -18,18 +13,19 @@ public class EnemyUI : MonoBehaviour
     }
     private void CreateEnemies()
     {
+        var activeEntity = GameInstance.Instance.SelectedEntity;
         foreach (Transform enemyTransform in enemyContainerTransform)
         {
             Destroy(enemyTransform.gameObject);
         }
         
         spawnEntities = new List<Entity>();
-        foreach (Entity minion in currentEntity.minions)
+        foreach (Entity minion in activeEntity.minions)
         {
             spawnEntities.Add(minion);   
         }
         int mid = spawnEntities.Count/2;
-        spawnEntities.Insert(mid, currentEntity);
+        spawnEntities.Insert(mid, activeEntity);
 
         foreach (Entity enemy in spawnEntities)
         {
