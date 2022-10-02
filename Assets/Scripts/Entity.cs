@@ -12,34 +12,72 @@ public class Entity : ScriptableObject
     [Min(0f)] public float StartingHp;
     [Min(1f)] public float MaxHp;
     public float CurrentHp;
+    public float CurrentDefense = 0;
+    public float StartingDefense;
 
     // Moves
-    public float AttackDamage;
-    public float Defense;
+    public float StartingDamageValue;
+    public float StartingDefenseIncrementValue = 0;
+    public float CurrentDamageValue;
+    public float CurrentDefenseIncrementValue;
+    public float DamageMultiplier;
+    public float DefenseMultiplier;
     public Buff[] Buffs;
-    // TODO: Move Pattern
 
     public enum ActionType
     {
         Attack,
         Defense,
-        Buff
+        BuffAttack,
+        BuffDefense,
+        DebuffAttack,
+        DebuffDefense
     }
     public List<ActionType> movePattern;
+    public int CurrentPatternIndex = 0;
     public Entity[] minions;
 
-    public void Damage(int damageValue)
+    public void Damage(float damageValue)
     {
-        CurrentHp -= damageValue;
+        float diff = damageValue - CurrentDefense;
+        if (damageValue < 0)
+        {
+            ModifyDefense(diff);
+        }
+        else
+        {
+            ModifyDefense(-CurrentDefense);
+            CurrentHp -= diff;
+        }
     }
 
-    public void Heal(int healValue)
+    public void ModifyDefense(float defenseValue)
+    {
+        CurrentDefense += defenseValue;
+    }
+    public void buffDamage()
+    {
+        CurrentDamageValue *= DamageMultiplier;
+    }
+    public void buffDefense()
+    {
+        CurrentDefenseIncrementValue *= DefenseMultiplier;
+    }
+    public void Heal(float healValue)
     {
         CurrentHp += healValue;
 
         if(CurrentHp > MaxHp)
         {
             CurrentHp = MaxHp;
+        }
+    }
+    public void UpdatePatternIndex()
+    {
+        CurrentPatternIndex++;
+        if (CurrentPatternIndex > movePattern.Count)
+        {
+            CurrentPatternIndex = 0;
         }
     }
     

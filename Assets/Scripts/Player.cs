@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     public string Name { get; set; }
     public float CurrentHp { get; set; }
+    public float CurrentDefense { get; set; }
     public string HpDisplayText { get { return $"{CurrentHp}/{maxHp}"; } }
     public int CurrentCorporateBucksAmount { get; set; }
     public List<Card> ReserveCards { get; set; } = new List<Card>();
@@ -22,4 +23,24 @@ public class Player : MonoBehaviour
         CurrentCorporateBucksAmount = startingCorporateBucksAmount;
         CardsInDeck.AddRange(startingCards);
     }
+
+    public void Damage(float damageValue)
+    {
+        float diff = damageValue - CurrentDefense;
+        if (damageValue < 0)
+        {
+            CurrentDefense += diff;
+        }
+        else
+        {
+            CurrentDefense = 0;
+            CurrentHp -= diff;
+        }
+    }
+
+    public void ModifyDefense(float defenseValue)
+    {
+        CurrentDefense += defenseValue;
+    }
+
 }

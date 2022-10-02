@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 6374392793126137851}
+  defense: {fileID: 6374392792458050538}
   enemyIcon: {fileID: 6374392792091019991}
 --- !u!1 &6374392792091019977
 GameObject:

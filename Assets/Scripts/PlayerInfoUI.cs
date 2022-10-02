@@ -8,7 +8,7 @@ public class PlayerInfoUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI drawDeck;
     [SerializeField] private TextMeshProUGUI discardPile;
 
-    private void Start()
+    private void Update()
     {
         healthText.text = "Health: " + GameInstance.Instance.MainPlayer.HpDisplayText;
         drawDeck.text = "Draw Deck: " + GameInstance.Instance.MainPlayer.CardsInDeck.Count;

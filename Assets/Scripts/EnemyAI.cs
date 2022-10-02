@@ -13,14 +13,18 @@ public class EnemyAI : MonoBehaviour
     
     private State state;
     private float enemyTimer;
+    [SerializeField] private Entity currentEntity;
     private List<Entity> enemyList;
-    private EnemyUI enemyUI;
-    private int patternIndex = 1;
     
     private void Awake()
     {
         state = State.WaitingForEnemyTurn;
-        enemyList = enemyUI.GetEnemiesList();
+        enemyList = new List<Entity>{currentEntity};
+        foreach (Entity minion in currentEntity.minions)
+        {
+            enemyList.Add(minion);   
+        }
+        enemyList.Reverse();
     }
     private void Start()
     {
@@ -33,31 +37,25 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
+        Debug.Log("Enemy Turn: " + enemyList.Count);
+        Debug.Log("State: " + state);
         switch(state)
         {
             case State.WaitingForEnemyTurn:
+                Debug.Log("WaitingForTurn");
                 break;
             case State.TakingTurn:
                 enemyTimer -= Time.deltaTime;
+                Debug.Log("Taking Turn: "+ enemyTimer);
                 if (enemyTimer <= 0f)
                 {
-                    if (TryTakeEnemyAIAction(SetStateTakingTurn))
-                    {
-                        state = State.Busy;
-                    }
-                    else
-                    {
-                        // No more enemies have actions they can take, end enemy turn
-                        TurnSystem.Instance.NextTurn();
-                    }
-                    
+                    TryTakeEnemyAIAction(SetStateTakingTurn);
+                    TurnSystem.Instance.NextTurn();
                 }
                 break;
             case State.Busy:
                 break;
         }
-
-
     }
 
     private void SetStateTakingTurn()
@@ -75,33 +73,47 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private bool TryTakeEnemyAIAction(Action onEnemyAIActionComplete)
+    private void TryTakeEnemyAIAction(Action onEnemyAIActionComplete)
     {
         foreach (Entity enemy in enemyList)
         {
-            if(TryTakeEnemyAIAction(enemy, onEnemyAIActionComplete))
-            {
-                return true;
-            }
+            Debug.Log("Enemy: " + enemy.Name);
+            TryTakeEnemyAIAction(enemy, onEnemyAIActionComplete);
         }
 
-        return false;
     }
 
-    private bool TryTakeEnemyAIAction(Entity enemy, Action onEnemyAIActionComplete)
+    private void TryTakeEnemyAIAction(Entity enemy, Action onEnemyAIActionComplete)
     {
         //Get Pattern
+        Entity.ActionType actionName = enemy.movePattern[enemy.CurrentPatternIndex];
         //Take action
-        //Update pattern index
-                
-        //If true, take action and return true, if no action taken, return false
-        if (true)
+        Debug.Log("Action: " + actionName);
+        
+        switch(actionName)
         {
-            return true;
+            case Entity.ActionType.Attack:
+                GameInstance.Instance.MainPlayer.Damage(enemy.CurrentDamageValue);
+                break;
+            case Entity.ActionType.Defense:
+                enemy.ModifyDefense(enemy.CurrentDefenseIncrementValue);
+                break;
+            case Entity.ActionType.BuffAttack:
+                enemy.buffDamage();
+                break;
+            case Entity.ActionType.BuffDefense:
+                enemy.buffDefense();
+                break;
+            case Entity.ActionType.DebuffAttack:
+                // Add Logic
+                break;
+            case Entity.ActionType.DebuffDefense:
+                // Add Logic
+                break;
+            default:
+                Debug.LogError("Wrong Action Type");
+                break;
         }
-        else
-        {
-            return false;
-        }
+        enemy.UpdatePatternIndex();
     }
 }

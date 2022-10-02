@@ -356,7 +356,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7567487940237124411}
   - component: {fileID: -9127315677738513537}
-  - component: {fileID: 972088202811570409}
   m_Layer: 5
   m_Name: BattleCard
   m_TagString: Untagged
@@ -405,16 +404,3 @@ MonoBehaviour:
   battleScene_cardName: {fileID: 1818555557636032051}
   battleScene_cardValue: {fileID: 6625366994910636642}
   battleScene_cardIcon: {fileID: 6017837023654324272}
---- !u!114 &972088202811570409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4510977730817599550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e668a1d6b96420547a77aa1406b5407c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardUI: {fileID: 0}
