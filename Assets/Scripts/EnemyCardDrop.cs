@@ -67,12 +67,19 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
                 Debug.LogError("Wrong Action Type");
                 break;
         }
-        
-        // Draw Next Card
+
         GameManager.Instance.DeckController.DrawCard();
 
-        // If object is dropped on an enemy and is an attack
-        // Then damage enemy, place card in discard pile, draw next card, destroy card
+        if(enemyUI.GetEnemy().CurrentHp <= 0)
+        {
+            GameManager.Instance.Enemies.Remove(enemyUI.GetEnemy());
+        }
+
+        if(GameManager.Instance.Enemies.Count == 0)
+        {
+            GameManager.Instance.RewardScreen();
+        }
+
         if(GameInstance.Instance.MainPlayer.GetMana() == 0)
         {
             TurnSystem.Instance.NextTurn();

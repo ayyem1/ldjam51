@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -65,5 +66,17 @@ public class GameManager : Singleton<GameManager>
         PopUpAction popUpAction = popUpTransform.GetComponent<PopUpAction>();
         popUpAction.Setup(valueAmount, sprite);
         return popUpAction;
+    }
+
+    public void RewardScreen()
+    {
+        timer.StopTimer();
+        SceneManager.LoadScene(1);
+    }
+
+    public void GameOverScreen()
+    {
+        timer.StopTimer();
+        SceneManager.LoadScene(0);
     }
 }
