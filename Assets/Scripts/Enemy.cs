@@ -32,10 +32,13 @@ public class Enemy
             CurrentHp -= diff;
         }
     }
-
     public void ModifyDefense(float defenseValue)
     {
         CurrentDefense += defenseValue;
+    }
+    public void ResetDefense()
+    {
+        CurrentDefense = 0;
     }
     public void BuffDamage()
     {
@@ -44,6 +47,11 @@ public class Enemy
     public void BuffDefense()
     {
         CurrentDefenseIncrementValue *= DefenseMultiplier;
+    }
+    public void ResetBuffs()
+    {
+        CurrentDamageValue = Data.StartingDamageValue;
+        CurrentDefenseIncrementValue = Data.StartingDefenseIncrementValue;
     }
     public void Heal(float healValue)
     {

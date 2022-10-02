@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
 
     public int MinDeckCount { get { return minNumCardsInDeck; } }
     public int MaxDeckCount { get { return maxNumCardsInDeck; } }
+    public int MaxMoveCounter {get; set;} = 3;
+    public int CurrentMoveCounter{get;set;}
+    public string moveCounterDisplayText { get { return $"{CurrentMoveCounter}/{MaxMoveCounter}"; } }
     public void InitializePlayer()
     {
         Name = "New Guy"; // TODO: Ask user for name.
@@ -41,10 +44,14 @@ public class Player : MonoBehaviour
             CurrentHp -= diff;
         }
     }
-
     public void ModifyDefense(float defenseValue)
     {
         CurrentDefense += defenseValue;
+    }
+
+    public void UpdateMoveCounter()
+    {
+        CurrentMoveCounter--;
     }
 
 }

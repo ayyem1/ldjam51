@@ -47,6 +47,8 @@ public class EnemyAI : MonoBehaviour
 
     private void TakeEnemyAIAction(Enemy enemy)
     {
+        //Reset Defense
+        enemy.ResetDefense();
         //Get Pattern
         Entity.ActionType actionName = enemy.Data.movePattern[enemy.CurrentPatternIndex];
         //Take action
@@ -56,9 +58,11 @@ public class EnemyAI : MonoBehaviour
         {
             case Entity.ActionType.Attack:
                 GameInstance.Instance.MainPlayer.Damage(enemy.CurrentDamageValue);
+                enemy.ResetBuffs();
                 break;
             case Entity.ActionType.Defense:
                 enemy.ModifyDefense(enemy.CurrentDefenseIncrementValue);
+                enemy.ResetBuffs();
                 break;
             case Entity.ActionType.BuffAttack:
                 enemy.BuffDamage();

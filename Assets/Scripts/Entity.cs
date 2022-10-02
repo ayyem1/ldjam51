@@ -16,6 +16,8 @@ public class Entity : ScriptableObject
 
     public float StartingDamageValue;
     public float StartingDefenseIncrementValue = 0;
+    public float StartingAttackMultplier;
+    public float StartingDefenseMultiplier;
 
     public enum ActionType
     {

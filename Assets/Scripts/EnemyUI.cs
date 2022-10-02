@@ -28,6 +28,8 @@ public class EnemyUI : MonoBehaviour
         refEnemy.CurrentDefense = refEnemy.Data.StartingDefense;
         refEnemy.CurrentDamageValue = refEnemy.Data.StartingDamageValue;
         refEnemy.CurrentDefenseIncrementValue = refEnemy.Data.StartingDefenseIncrementValue;
+        refEnemy.DamageMultiplier = refEnemy.Data.StartingAttackMultplier;
+        refEnemy.DefenseMultiplier = refEnemy.Data.StartingDefenseMultiplier;
 
         isInitialized = true;
     }
