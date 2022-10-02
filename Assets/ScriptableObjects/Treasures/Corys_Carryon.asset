@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Cory's Carryon
   Description: Who lugs around this much stuff?
-  GrantedCorporateBucks: 10
+  Icon: {fileID: 0}
+  GrantedCorporateBucks: 5
   GrantedCards: []

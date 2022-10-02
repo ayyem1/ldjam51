@@ -3,8 +3,6 @@ using UnityEngine;
 public class Interactible : MonoBehaviour
 {
     [SerializeField] private InteractionDialog interactionDialog;
-
-    public bool WasInteractedWith {get; set;}
     public enum InteractibleType
     {
         HealingItem,

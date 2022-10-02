@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: First Aid
   Description: Legally required to be free
-  HealingAmount: 10
+  Icon: {fileID: 0}
+  HealingAmount: 15
   HealingPrice: 0
+  IsSingleUse: 1

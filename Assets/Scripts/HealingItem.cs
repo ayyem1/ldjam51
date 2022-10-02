@@ -8,4 +8,5 @@ public class HealingItem : ScriptableObject
     public Sprite Icon;
     [Min(0f)] public float HealingAmount;
     [Min(0f)] public int HealingPrice;
+    public bool IsSingleUse;
 }

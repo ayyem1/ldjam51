@@ -963,3 +963,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthLabel: {fileID: 8917713531730061462}
   CorporateBucksLabel: {fileID: 8917713532041711053}
+  DeckBuilderDialog: {fileID: 0}

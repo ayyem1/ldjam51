@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Bill's Briefcase
   Description: One little peak won't hurt.
-  GrantedCorporateBucks: 0
+  Icon: {fileID: 0}
+  GrantedCorporateBucks: 5
   GrantedCards: []

@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public string Name { get; set; }
     public float CurrentHp { get; set; }
     public float CurrentDefense { get; set; }
+
+    public float MaxHP { get { return maxHp; } }
     public string HpDisplayText { get { return $"{CurrentHp}/{maxHp}"; } }
     public int CurrentCorporateBucksAmount { get; set; }
     public List<Card> ReserveCards { get; set; } = new List<Card>();
@@ -55,6 +57,32 @@ public class Player : MonoBehaviour
         {
             Debug.LogError("Attempted to reduce player mana below 0.");
         }
+    }
+
+    public void ModifyCorporateBucksAmount(int amount)
+    {
+        CurrentCorporateBucksAmount = CurrentCorporateBucksAmount + amount;
+        if (CurrentCorporateBucksAmount < 0)
+        {
+            CurrentCorporateBucksAmount = 0;
+        }
+    }
+
+    public void AddCard(Card card)
+    {
+        if (CardsInDeck.Count < MaxDeckCount)
+        {
+            CardsInDeck.Add(card);
+        }
+        else
+        {
+            ReserveCards.Add(card);
+        }
+    }
+
+    public void Heal(float healAmount)
+    {
+        CurrentHp = Mathf.Clamp(CurrentHp + healAmount, 0f, MaxHP);
     }
 
     public int GetMana()

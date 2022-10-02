@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class GameInstance : Singleton<GameInstance>
@@ -7,6 +9,8 @@ public class GameInstance : Singleton<GameInstance>
     public Player MainPlayer;
 
     public Entity SelectedEntity { get; set; }
+
+    public List<string> Interactions { get; private set; } = new List<string>();
     public void Awake()
     {
         DontDestroyOnLoad(gameObject);

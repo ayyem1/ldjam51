@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Company Coffee
   Description: You pay for each cup at this company!
+  Icon: {fileID: 0}
   HealingAmount: 15
-  HealingPrice: 100
+  HealingPrice: 10
+  IsSingleUse: 0
