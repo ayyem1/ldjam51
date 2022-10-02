@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     {
         TurnSystem.Instance.OnTurnChanged += TurnSystem_OnTurnChanged;
     }
-    private void Update()
+    /**private void Update()
     {
         if (TurnSystem.Instance.IsPlayerTurn())
         {
@@ -56,34 +57,42 @@ public class EnemyAI : MonoBehaviour
             case State.Busy:
                 break;
         }
-    }
+    }*/
 
-    private void SetStateTakingTurn()
+    /*private void SetStateTakingTurn()
     {
         enemyTimer = 0.5f;
         state = State.TakingTurn;
-    }
+    }*/
 
     private void TurnSystem_OnTurnChanged(object sender, EventArgs e)
     {
-        if (!TurnSystem.Instance.IsPlayerTurn())
+        if (TurnSystem.Instance.IsPlayerTurn())
         {
-            state = State.TakingTurn;
-            enemyTimer = 2f;
+            return;
         }
+            //state = State.TakingTurn;
+        //enemyTimer = 2f;
+        StartCoroutine(DoEnemyTurn(2f));
     }
 
-    private void TryTakeEnemyAIAction(Action onEnemyAIActionComplete)
+    private IEnumerator DoEnemyTurn(float startDelay)
+    {
+        yield return new WaitForSeconds(startDelay);
+        TakeEnemyAIAction();
+        TurnSystem.Instance.NextTurn();
+    }
+
+    private void TakeEnemyAIAction()
     {
         foreach (Entity enemy in enemyList)
         {
             Debug.Log("Enemy: " + enemy.Name);
-            TryTakeEnemyAIAction(enemy, onEnemyAIActionComplete);
+            TakeEnemyAIAction(enemy);
         }
-
     }
 
-    private void TryTakeEnemyAIAction(Entity enemy, Action onEnemyAIActionComplete)
+    private void TakeEnemyAIAction(Entity enemy)
     {
         //Get Pattern
         Entity.ActionType actionName = enemy.movePattern[enemy.CurrentPatternIndex];

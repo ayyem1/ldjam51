@@ -34,8 +34,9 @@ public class Entity : ScriptableObject
         DebuffDefense
     }
     public List<ActionType> movePattern;
-    public int CurrentPatternIndex = 0;
     public Entity[] minions;
+
+    public int CurrentPatternIndex { get; private set; } = 0;
 
     public void Damage(float damageValue)
     {
@@ -75,7 +76,7 @@ public class Entity : ScriptableObject
     public void UpdatePatternIndex()
     {
         CurrentPatternIndex++;
-        if (CurrentPatternIndex > movePattern.Count)
+        if (CurrentPatternIndex > movePattern.Count - 1)
         {
             CurrentPatternIndex = 0;
         }
