@@ -9,8 +9,10 @@ public class Enemy
 
     public float CurrentDamageValue;
     public float CurrentDefenseIncrementValue;
-    public float DamageMultiplier;
-    public float DefenseMultiplier;
+    public float DamageBuffAmount;
+    public float DefenseBuffAmount;
+    public float DebuffDamageAmount;
+    public float DebuffDefenseAmount;
     public int CurrentPatternIndex { get; private set; } = 0;
 
 
@@ -40,13 +42,13 @@ public class Enemy
     {
         CurrentDefense = 0;
     }
-    public void BuffDamage()
+    public void BuffDamage(float amount)
     {
-        CurrentDamageValue *= DamageMultiplier;
+        CurrentDamageValue += amount;
     }
-    public void BuffDefense()
+    public void BuffDefense(float amount)
     {
-        CurrentDefenseIncrementValue *= DefenseMultiplier;
+        CurrentDefenseIncrementValue += amount;
     }
     public void ResetBuffs()
     {

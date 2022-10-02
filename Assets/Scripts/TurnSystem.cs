@@ -36,7 +36,12 @@ public class TurnSystem : MonoBehaviour
         {
             GameInstance.Instance.MainPlayer.ResetMana();
             GameManager.Instance.DeckController.RefreshPlayerHand();
+            GameInstance.Instance.MainPlayer.ModifyDefense(-GameInstance.Instance.MainPlayer.CurrentDefense);
             timer.SetTimer();
+        }
+        else
+        {
+            GameInstance.Instance.MainPlayer.ResetBuffs();
         }
 
         OnTurnChanged?.Invoke(this, EventArgs.Empty);

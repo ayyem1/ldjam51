@@ -17,15 +17,16 @@ public class Player : MonoBehaviour
     public int CurrentCorporateBucksAmount { get; set; }
     public List<Card> ReserveCards { get; set; } = new List<Card>();
     public List<Card> CardsInDeck { get; set; } = new List<Card>();
-    public List<Card> CardsInDiscard { get; set; } = new List<Card>();
 
     public int MinDeckCount { get { return minNumCardsInDeck; } }
     public int MaxDeckCount { get { return maxNumCardsInDeck; } }
-    public int MaxMoveCounter {get; set;} = 3;
-    public int CurrentMoveCounter{get;set;}
-    public string MoveCounterDisplayText { get { return $"{CurrentMoveCounter}/{MaxMoveCounter}"; } }
+    public string ManaDisplayText { get { return $"{RemainingPlayerMana}/{StartingMana}"; } }
     public int StartingMana { get { return startingMana; } }
     public int RemainingPlayerMana { get; private set; }
+
+    public float BuffDamageAmount = 0;
+    public float BuffDefenseAmount = 0 ;
+
 
     public void InitializePlayer()
     {
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
 
     public void ResetMana()
     {
+        // Shouldn't this be just Starting Mana?
         RemainingPlayerMana = GameInstance.Instance.MainPlayer.StartingMana;
     }
 
@@ -53,6 +55,11 @@ public class Player : MonoBehaviour
         {
             Debug.LogError("Attempted to reduce player mana below 0.");
         }
+    }
+
+    public int GetMana()
+    {
+        return RemainingPlayerMana;
     }
 
     public void Damage(float damageValue)
@@ -72,10 +79,17 @@ public class Player : MonoBehaviour
     {
         CurrentDefense += defenseValue;
     }
-
-    public void UpdateMoveCounter()
+    public void BuffDamage(float amount)
     {
-        CurrentMoveCounter--;
+        BuffDamageAmount += amount;
     }
-
+    public void BuffDefense(float amount)
+    {
+        BuffDefenseAmount += amount;
+    }
+    public void ResetBuffs()
+    {
+        BuffDefenseAmount = 0;
+        BuffDamageAmount = 0;
+    }
 }

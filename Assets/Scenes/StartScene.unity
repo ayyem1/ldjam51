@@ -839,9 +839,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a216f6362114d5e42bd15417c235e50a, type: 2}
   - {fileID: 11400000, guid: a216f6362114d5e42bd15417c235e50a, type: 2}
   - {fileID: 11400000, guid: a216f6362114d5e42bd15417c235e50a, type: 2}
-  - {fileID: 11400000, guid: ec4339e8cd6fd5d46b5d42e543cd0c67, type: 2}
-  - {fileID: 11400000, guid: ec4339e8cd6fd5d46b5d42e543cd0c67, type: 2}
-  - {fileID: 11400000, guid: ec4339e8cd6fd5d46b5d42e543cd0c67, type: 2}
+  - {fileID: 11400000, guid: e9dd5c940ef089b4199775c289144af8, type: 2}
+  - {fileID: 11400000, guid: e9dd5c940ef089b4199775c289144af8, type: 2}
+  - {fileID: 11400000, guid: e9dd5c940ef089b4199775c289144af8, type: 2}
+  startingMana: 3
+  BuffDamageAmount: 0
+  BuffDefenseAmount: 0
 --- !u!1 &1891762053
 GameObject:
   m_ObjectHideFlags: 0

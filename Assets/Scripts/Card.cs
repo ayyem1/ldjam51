@@ -13,7 +13,10 @@ public class Card : ScriptableObject
     {
         Attack,
         Defense,
-        Buff
+        BuffAttack,
+        BuffDefense,
+        DebuffAttack,
+        DebuffDefense
     }
     public float cardValue;
     public Buff[] Buffs;

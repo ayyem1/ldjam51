@@ -65,16 +65,16 @@ public class EnemyAI : MonoBehaviour
                 enemy.ResetBuffs();
                 break;
             case Entity.ActionType.BuffAttack:
-                enemy.BuffDamage();
+                enemy.BuffDamage(enemy.DamageBuffAmount);
                 break;
             case Entity.ActionType.BuffDefense:
-                enemy.BuffDefense();
+                enemy.BuffDefense(enemy.DefenseBuffAmount);
                 break;
             case Entity.ActionType.DebuffAttack:
-                // Add Logic
+                GameInstance.Instance.MainPlayer.BuffDamage(-enemy.DebuffDamageAmount);
                 break;
             case Entity.ActionType.DebuffDefense:
-                // Add Logic
+                GameInstance.Instance.MainPlayer.BuffDefense(-enemy.DebuffDefenseAmount);
                 break;
             default:
                 Debug.LogError("Wrong Action Type");
