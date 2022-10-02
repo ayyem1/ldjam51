@@ -12,10 +12,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private CardUI draggedCardUI;
     [SerializeField] private Transform popUpTransform;
     [SerializeField] private Sprite[] spriteArray;
+    [SerializeField] private BattleDialog dialogBox;
     private Sprite sprite;
 
     public DeckController DeckController;
-
 
     public void Start()
     {
@@ -71,12 +71,12 @@ public class GameManager : Singleton<GameManager>
     public void RewardScreen()
     {
         timer.StopTimer();
-        SceneManager.LoadScene(1);
+        dialogBox.InitializeReward(GameInstance.Instance.SelectedEntity, true);
     }
 
     public void GameOverScreen()
     {
         timer.StopTimer();
-        SceneManager.LoadScene(0);
+        dialogBox.InitializeGameOver();
     }
 }
