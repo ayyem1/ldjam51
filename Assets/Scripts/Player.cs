@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public int CurrentCorporateBucksAmount { get; set; }
     public List<Card> ReserveCards { get; set; } = new List<Card>();
     public List<Card> CardsInDeck { get; set; } = new List<Card>();
+    public List<Card> CardsInDiscard { get; set; } = new List<Card>();
 
     public int MinDeckCount { get { return minNumCardsInDeck; } }
     public int MaxDeckCount { get { return maxNumCardsInDeck; } }

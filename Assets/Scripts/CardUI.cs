@@ -53,4 +53,9 @@ public class CardUI : MonoBehaviour
         Icon.gameObject.SetActive(false);
         Description.gameObject.SetActive(false);
     }
+
+    public Card GetCard()
+    {
+        return refCard;
+    }
 }

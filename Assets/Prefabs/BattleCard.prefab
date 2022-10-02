@@ -356,9 +356,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7567487940237124411}
   - component: {fileID: -9127315677738513537}
+  - component: {fileID: 1422714296236169549}
+  - component: {fileID: -1823352322834804774}
   m_Layer: 5
   m_Name: BattleCard
-  m_TagString: Untagged
+  m_TagString: BattleCard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,3 +406,80 @@ MonoBehaviour:
   battleScene_cardName: {fileID: 1818555557636032051}
   battleScene_cardValue: {fileID: 6625366994910636642}
   battleScene_cardIcon: {fileID: 6017837023654324272}
+  Background: {fileID: 0}
+  Border: {fileID: 0}
+--- !u!114 &1422714296236169549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4510977730817599550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c41ad0ca9a49b41922c5ef029a3042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 7567487940237124411}
+  enemyBoxCollider2D: {fileID: 839815798119885367, guid: 7b4f3f380ac3c0f42a2c839d32e982f2, type: 3}
+--- !u!114 &-1823352322834804774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4510977730817599550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1422714296236169549}
+          m_TargetAssemblyTypeName: MoveUIObject, Assembly-CSharp
+          m_MethodName: MoveObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1422714296236169549}
+          m_TargetAssemblyTypeName: MoveUIObject, Assembly-CSharp
+          m_MethodName: GetOffset
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1422714296236169549}
+          m_TargetAssemblyTypeName: PlayCard, Assembly-CSharp
+          m_MethodName: DropObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

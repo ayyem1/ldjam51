@@ -4,6 +4,7 @@ using TMPro;
 
 public class EnemyUI : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI enemyName;
     [SerializeField] private TextMeshProUGUI health;
     [SerializeField] private TextMeshProUGUI defense;
     [SerializeField] private Image enemyIcon;
@@ -38,5 +39,11 @@ public class EnemyUI : MonoBehaviour
     {
         defense.text =  refEnemy.CurrentDefense.ToString();
         health.text = $"{refEnemy.CurrentHp}/{refEnemy.Data.MaxHp}";
+        enemyName.text = refEnemy.Data.Name;
+    }
+
+    public Enemy GetEnemy()
+    {
+        return refEnemy;
     }
 }
