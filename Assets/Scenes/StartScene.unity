@@ -830,6 +830,8 @@ MonoBehaviour:
   startingHp: 60
   maxHp: 60
   startingCorporateBucksAmount: 10
+  minNumCardsInDeck: 9
+  maxNumCardsInDeck: 30
   startingCards:
   - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}
   - {fileID: 11400000, guid: 5845b7dc259bf76419b6d93106968db8, type: 2}
