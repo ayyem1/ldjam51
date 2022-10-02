@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -12,10 +13,14 @@ public class EnemyAI : MonoBehaviour
     
     private State state;
     private float enemyTimer;
+    private List<Entity> enemyList;
+    private EnemyUI enemyUI;
+    private int patternIndex = 1;
     
     private void Awake()
     {
         state = State.WaitingForEnemyTurn;
+        enemyList = enemyUI.GetEnemiesList();
     }
     private void Start()
     {
@@ -36,16 +41,15 @@ public class EnemyAI : MonoBehaviour
                 enemyTimer -= Time.deltaTime;
                 if (enemyTimer <= 0f)
                 {
-                    /*if (TryTakeEnemyAIAction(SetStateTakingTurn))
+                    if (TryTakeEnemyAIAction(SetStateTakingTurn))
                     {
                         state = State.Busy;
                     }
                     else
                     {
-                        */
                         // No more enemies have actions they can take, end enemy turn
                         TurnSystem.Instance.NextTurn();
-                    //}
+                    }
                     
                 }
                 break;
@@ -68,6 +72,36 @@ public class EnemyAI : MonoBehaviour
         {
             state = State.TakingTurn;
             enemyTimer = 2f;
+        }
+    }
+
+    private bool TryTakeEnemyAIAction(Action onEnemyAIActionComplete)
+    {
+        foreach (Entity enemy in enemyList)
+        {
+            if(TryTakeEnemyAIAction(enemy, onEnemyAIActionComplete))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool TryTakeEnemyAIAction(Entity enemy, Action onEnemyAIActionComplete)
+    {
+        //Get Pattern
+        //Take action
+        //Update pattern index
+                
+        //If true, take action and return true, if no action taken, return false
+        if (true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

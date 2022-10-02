@@ -10,12 +10,11 @@ public class EntityUI : MonoBehaviour
     [SerializeField] private Image enemyIcon;
     private Entity refEntity;
 
-    public void IntializeEntity(Entity refEntity)
+    public void InitializeEntity(Entity refEntity)
     {
         this.refEntity = refEntity;
         health.text = $"{refEntity.StartingHp}/{refEntity.MaxHp}";
-        enemyIcon.sprite = refEntity.battleSprite;
-     
+        enemyIcon.sprite = refEntity.BattleSprite;
     }
 
 }

@@ -10,6 +10,7 @@ public class EnemyUI : MonoBehaviour
     [SerializeField] private EntityUI enemyPrefab;
     [SerializeField] private Transform enemyContainerTransform;
     [SerializeField] private Entity currentEntity;
+    private List<Entity> spawnEntities;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class EnemyUI : MonoBehaviour
             Destroy(enemyTransform.gameObject);
         }
         
-        List<Entity> spawnEntities = new List<Entity>();
+        spawnEntities = new List<Entity>();
         foreach (Entity minion in currentEntity.minions)
         {
             spawnEntities.Add(minion);   
@@ -33,9 +34,13 @@ public class EnemyUI : MonoBehaviour
         foreach (Entity enemy in spawnEntities)
         {
             EntityUI enemyEntity = Instantiate<EntityUI>(enemyPrefab, enemyContainerTransform);
-            enemyEntity.IntializeEntity(enemy);
+            enemyEntity.InitializeEntity(enemy);
         }
-        
+    }
+
+    public List<Entity> GetEnemiesList()
+    {
+        return spawnEntities;
     }
 
 }

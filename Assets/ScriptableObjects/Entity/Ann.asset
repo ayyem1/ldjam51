@@ -14,17 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ann From Accounting
   Dialog: Where are your invoices?
-  battleSprite: {fileID: 0}
+  BattleSprite: {fileID: 0}
   StartingHp: 50
   MaxHp: 50
+  CurrentHp: 0
   AttackDamage: 3
   Defense: 4
   Buffs: []
-  movePattern:
-  - Attack
-  - Defend
-  - Defend
-  movePatternValues: 030000000400000004000000
+  movePattern: 000000000100000001000000
   minions:
   - {fileID: 11400000}
   - {fileID: 11400000}
