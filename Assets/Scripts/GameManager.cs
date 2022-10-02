@@ -8,8 +8,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private EnemyUISpawner enemyUISpawner;
     [SerializeField] private EnemyAI enemyAI;
     [SerializeField] private Timer timer;
-    [SerializeField] private DeckController deckController;
-    [SerializeField] private CardUI DraggedCardUI;
+    [SerializeField] private CardUI draggedCardUI;
+
+    public DeckController DeckController;
+
 
     public void Start()
     {
@@ -24,7 +26,7 @@ public class GameManager : Singleton<GameManager>
         enemyUISpawner.SpawnEnemyUI(Enemies);
         enemyAI.Initialize(Enemies);
 
-        deckController.CreateHand(DraggedCardUI);
+        DeckController.CreateHand(draggedCardUI);
         // TODO: Insert dialog.
 
         timer.SetTimer();

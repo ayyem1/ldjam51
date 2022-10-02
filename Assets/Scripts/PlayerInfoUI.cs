@@ -10,7 +10,7 @@ public class PlayerInfoUI : MonoBehaviour
     private void Update()
     {
         healthText.text = "Health: " + GameInstance.Instance.MainPlayer.HpDisplayText;
-        moveCounter.text = "Moves:" + GameInstance.Instance.MainPlayer.moveCounterDisplayText;
+        moveCounter.text = "Moves:" + GameInstance.Instance.MainPlayer.MoveCounterDisplayText;
         defense.text = "Defense: " + GameInstance.Instance.MainPlayer.CurrentDefense;
     }
 

@@ -77,7 +77,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
     private void Start()
     {
-        //DraggedCardUI = GameObject.FindGameObjectWithTag("DraggedCardUI").GetComponent<CardUI>();
+        //draggedCardUI = GameObject.FindGameObjectWithTag("draggedCardUI").GetComponent<CardUI>();
         DraggedCardUI.gameObject.SetActive(false);
 
         var uiCameraObject = GameObject.FindGameObjectWithTag("UICamera");

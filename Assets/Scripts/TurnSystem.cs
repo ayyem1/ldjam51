@@ -34,6 +34,8 @@ public class TurnSystem : MonoBehaviour
         timer.StopTimer();
         if (isPlayerTurn)
         {
+            GameInstance.Instance.MainPlayer.ResetMana();
+            GameManager.Instance.DeckController.RefreshPlayerHand();
             timer.SetTimer();
         }
 

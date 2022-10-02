@@ -971,8 +971,8 @@ MonoBehaviour:
   cardContainerTransform: {fileID: 813719607}
   drawDeckCount: {fileID: 42271368}
   discardPileCount: {fileID: 1956353937}
-  cardsInHand: []
-  cardsInDiscard: []
+  CardsInHand: []
+  CardsInDiscard: []
 --- !u!1 &965291885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,8 +1728,8 @@ MonoBehaviour:
   enemyUISpawner: {fileID: 1061328594}
   enemyAI: {fileID: 1877791175}
   timer: {fileID: 1480030482}
-  deckController: {fileID: 813719609}
-  DraggedCardUI: {fileID: 507728549}
+  draggedCardUI: {fileID: 507728549}
+  DeckController: {fileID: 813719609}
 --- !u!1 &1480030480
 GameObject:
   m_ObjectHideFlags: 0
