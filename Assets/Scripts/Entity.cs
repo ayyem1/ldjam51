@@ -8,6 +8,7 @@ public class Entity : ScriptableObject
 {
     public string Name;
     public string Dialog;
+    public string LossDialog;
     public Sprite BattleSprite;
     [Min(0f)] public float StartingHp;
     [Min(1f)] public float MaxHp;
@@ -22,5 +23,8 @@ public class Entity : ScriptableObject
     public float StartingDefenseDebuff;
 
     public List<Card.ActionType> movePattern;
-    public Entity[] minions;    
+    public Entity[] minions;
+    public float RewardAmount;
+    public bool isRewardCard;
+    [SerializeField] public Card RewardCard;    
 }

@@ -42,6 +42,10 @@ public class EnemyAI : MonoBehaviour
         {
             //Debug.Log("Enemy: " + enemy.Data.Name);
             TakeEnemyAIAction(enemy);
+            if(GameInstance.Instance.MainPlayer.CurrentHp <=0 )
+            {
+                GameManager.Instance.GameOverScreen();
+            }
         }
     }
 
