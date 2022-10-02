@@ -1,54 +1,40 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class EnemyUI : MonoBehaviour
 {
-    [SerializeField] private EntityUI enemyPrefab;
-    [SerializeField] private Transform enemyContainerTransform;
-    private List<EntityUI> enemyUIList;
-    private List<Entity> spawnEntities;
+    [SerializeField] private TextMeshProUGUI health;
+    [SerializeField] private TextMeshProUGUI defense;
+    [SerializeField] private Image enemyIcon;
+    private Enemy refEnemy;
+    private bool isInitialized;
 
-    private void Start()
-    {
-        CreateEnemies();
-    }
+
     private void Update()
     {
-        foreach (EntityUI enemyUI in enemyUIList)
+        if (isInitialized)
         {
-            enemyUI.UpdateEntityVisual();
+            UpdateEntityVisual();
         }
     }
-    private void CreateEnemies()
+
+    public void Initialize(Enemy refEnemy)
     {
-        var activeEntity = GameInstance.Instance.SelectedEntity;
-        foreach (Transform enemyTransform in enemyContainerTransform)
-        {
-            Destroy(enemyTransform.gameObject);
-        }
-        
-        spawnEntities = new List<Entity>();
-        foreach (Entity minion in activeEntity.minions)
-        {
-            spawnEntities.Add(minion);   
-        }
-        int mid = spawnEntities.Count/2;
-        spawnEntities.Insert(mid, activeEntity);
+        this.refEnemy = refEnemy;
+        health.text = $"{refEnemy.Data.StartingHp}/{refEnemy.Data.MaxHp}";
+        enemyIcon.sprite = refEnemy.Data.BattleSprite;
+        refEnemy.CurrentHp = refEnemy.Data.StartingHp;
+        refEnemy.CurrentDefense = refEnemy.Data.StartingDefense;
+        refEnemy.CurrentDamageValue = refEnemy.Data.StartingDamageValue;
+        refEnemy.CurrentDefenseIncrementValue = refEnemy.Data.StartingDefenseIncrementValue;
 
-        enemyUIList = new List<EntityUI>();
-        foreach (Entity enemy in spawnEntities)
-        {
-            EntityUI enemyEntity = Instantiate<EntityUI>(enemyPrefab, enemyContainerTransform);
-            enemyEntity.InitializeEntity(enemy);
-            enemyUIList.Add(enemyEntity);
-        }
+        isInitialized = true;
     }
 
-    public List<Entity> GetEnemiesList()
+    public void UpdateEntityVisual()
     {
-        return spawnEntities;
+        defense.text =  refEnemy.CurrentDefense.ToString();
+        health.text = $"{refEnemy.CurrentHp}/{refEnemy.Data.MaxHp}";
     }
-
-
-
 }

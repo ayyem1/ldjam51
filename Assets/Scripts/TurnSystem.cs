@@ -31,10 +31,10 @@ public class TurnSystem : MonoBehaviour
     {
         turnNumber++;
         isPlayerTurn = !isPlayerTurn;
-        timer.stopTimer();
+        timer.StopTimer();
         if (isPlayerTurn)
         {
-            timer.setTimer();
+            timer.SetTimer();
         }
 
         OnTurnChanged?.Invoke(this, EventArgs.Empty);

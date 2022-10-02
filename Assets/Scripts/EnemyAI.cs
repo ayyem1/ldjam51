@@ -5,65 +5,19 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    private enum State
-    {
-        WaitingForEnemyTurn,
-        TakingTurn,
-        Busy
-    }
-    
-    private State state;
-    private float enemyTimer;
     [SerializeField] private Entity currentEntity;
-    private List<Entity> enemyList;
-    
-    private void Awake()
-    {
-        state = State.WaitingForEnemyTurn;
-        enemyList = new List<Entity>{currentEntity};
-        foreach (Entity minion in currentEntity.minions)
-        {
-            enemyList.Add(minion);   
-        }
-        enemyList.Reverse();
-    }
+    private List<Enemy> enemyList;
+   
     private void Start()
     {
+        TurnSystem.Instance.OnTurnChanged -= TurnSystem_OnTurnChanged;
         TurnSystem.Instance.OnTurnChanged += TurnSystem_OnTurnChanged;
     }
-    /**private void Update()
-    {
-        if (TurnSystem.Instance.IsPlayerTurn())
-        {
-            return;
-        }
 
-        Debug.Log("Enemy Turn: " + enemyList.Count);
-        Debug.Log("State: " + state);
-        switch(state)
-        {
-            case State.WaitingForEnemyTurn:
-                Debug.Log("WaitingForTurn");
-                break;
-            case State.TakingTurn:
-                enemyTimer -= Time.deltaTime;
-                Debug.Log("Taking Turn: "+ enemyTimer);
-                if (enemyTimer <= 0f)
-                {
-                    TryTakeEnemyAIAction(SetStateTakingTurn);
-                    TurnSystem.Instance.NextTurn();
-                }
-                break;
-            case State.Busy:
-                break;
-        }
-    }*/
-
-    /*private void SetStateTakingTurn()
+    public void Initialize(List<Enemy> enemies)
     {
-        enemyTimer = 0.5f;
-        state = State.TakingTurn;
-    }*/
+        enemyList = enemies;
+    }
 
     private void TurnSystem_OnTurnChanged(object sender, EventArgs e)
     {
@@ -71,8 +25,7 @@ public class EnemyAI : MonoBehaviour
         {
             return;
         }
-            //state = State.TakingTurn;
-        //enemyTimer = 2f;
+
         StartCoroutine(DoEnemyTurn(2f));
     }
 
@@ -85,17 +38,17 @@ public class EnemyAI : MonoBehaviour
 
     private void TakeEnemyAIAction()
     {
-        foreach (Entity enemy in enemyList)
+        foreach (Enemy enemy in enemyList)
         {
-            Debug.Log("Enemy: " + enemy.Name);
+            //Debug.Log("Enemy: " + enemy.Data.Name);
             TakeEnemyAIAction(enemy);
         }
     }
 
-    private void TakeEnemyAIAction(Entity enemy)
+    private void TakeEnemyAIAction(Enemy enemy)
     {
         //Get Pattern
-        Entity.ActionType actionName = enemy.movePattern[enemy.CurrentPatternIndex];
+        Entity.ActionType actionName = enemy.Data.movePattern[enemy.CurrentPatternIndex];
         //Take action
         Debug.Log("Action: " + actionName);
         
@@ -108,10 +61,10 @@ public class EnemyAI : MonoBehaviour
                 enemy.ModifyDefense(enemy.CurrentDefenseIncrementValue);
                 break;
             case Entity.ActionType.BuffAttack:
-                enemy.buffDamage();
+                enemy.BuffDamage();
                 break;
             case Entity.ActionType.BuffDefense:
-                enemy.buffDefense();
+                enemy.BuffDefense();
                 break;
             case Entity.ActionType.DebuffAttack:
                 // Add Logic
