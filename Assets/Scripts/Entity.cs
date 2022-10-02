@@ -24,7 +24,7 @@ public class Entity : ScriptableObject
 
     public List<Card.ActionType> movePattern;
     public Entity[] minions;
-    public float RewardAmount;
+    public int RewardAmount;
     public bool isRewardCard;
     [SerializeField] public Card RewardCard;    
 }

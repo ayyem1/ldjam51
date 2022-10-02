@@ -13,20 +13,21 @@ MonoBehaviour:
   m_Name: Ann
   m_EditorClassIdentifier: 
   Name: Ann From Accounting
-  Dialog: Where are your invoices?
+  StartingDialog: 
   LossDialog: Tch. These look like the correct invoices, I must have misplaced them.
   BattleSprite: {fileID: 0}
+  MapSprite: {fileID: 0}
   StartingHp: 3
-  MaxHp: 3
+  MaxHp: 16
   StartingDefense: 0
   StartingDamageValue: 3
   StartingDefenseIncrementValue: 3
-  StartingAttackBuff: 2
-  StartingDefenseBuff: 2
-  StartingAttackDebuff: 2
-  StartingDefenseDebuff: 2
+  StartingAttackBuff: 0
+  StartingDefenseBuff: 0
+  StartingAttackDebuff: 0
+  StartingDefenseDebuff: 0
   movePattern: 000000000200000003000000010000000400000005000000
   minions: []
-  RewardAmount: 0
-  isRewardCard: 0
+  RewardAmount: 22
+  isRewardCard: 1
   RewardCard: {fileID: 0}
