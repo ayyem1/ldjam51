@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(RectTransform))]
 // This drag implementation relies on a drag container be set up outside of the grid to avoid
 // sort order collisions with the items in the grid. The drag container needs to have
-// Image and CanvasGroup components. The CanvasGroup on the drag container needs to disable
+// Icon and CanvasGroup components. The CanvasGroup on the drag container needs to disable
 // 'blocks raycasts' and can optionally have an alpha value less than 1.
 public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {

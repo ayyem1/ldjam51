@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1118741337}
     m_Modifications:
     - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: TreasureItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a445d56e27b2584d86e24cef1edf681, type: 2}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: treasureItem
       value: 
       objectReference: {fileID: 11400000, guid: 6a445d56e27b2584d86e24cef1edf681, type: 2}
@@ -248,6 +252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1118741337}
     m_Modifications:
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: HealingItem
+      value: 
+      objectReference: {fileID: 11400000, guid: a68833fa9b5e1ef4a9895edd9d3ea928, type: 2}
     - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: healingItem
       value: 
@@ -508,8 +516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 760.0001, y: -419.6822}
-  m_SizeDelta: {x: 1520.0002, y: 511.78812}
+  m_AnchoredPosition: {x: 760, y: -420.31866}
+  m_SizeDelta: {x: 1520, y: 512.21246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &236062792
 MonoBehaviour:
@@ -3820,8 +3828,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1010.0002, y: -255.89406}
-  m_SizeDelta: {x: 1000.0001, y: 491.78812}
+  m_AnchoredPosition: {x: 1010, y: -256.10623}
+  m_SizeDelta: {x: 1000, y: 492.21246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409295994
 MonoBehaviour:
@@ -4030,6 +4038,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d2348249d765e4aa4b124d87cf9e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Title: {fileID: 348919980}
+  Description: {fileID: 409295994}
+  Icon: {fileID: 1928971974}
+  ButtonText: {fileID: 700424975}
 --- !u!1 &547013301
 GameObject:
   m_ObjectHideFlags: 0
@@ -4113,7 +4125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547013304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 514361144}
+        m_TargetAssemblyTypeName: InteractionDialog, Assembly-CSharp
+        m_MethodName: OnButtonPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &547013304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4159,6 +4183,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1118741337}
     m_Modifications:
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: TreasureItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 62fa3d53aa3f7a5459b380f5e019a801, type: 2}
     - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: treasureItem
       value: 
@@ -4856,7 +4884,7 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 15
       m_TileSpriteIndex: 13
-      m_TileMatrixIndex: 0
+      m_TileMatrixIndex: 11
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
@@ -5123,7 +5151,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1745581839, guid: f027d0f1d16711244aa8802e5318cc6a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 44
+  - m_RefCount: 43
     m_Data:
       e00: 1
       e01: 0
@@ -5321,24 +5349,24 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 0
+  - m_RefCount: 1
     m_Data:
-      e00: 0
+      e00: 1
       e01: 0
-      e02: 3.0700943e+29
-      e03: 3.0700943e+29
+      e02: 0
+      e03: 0
       e10: 0
-      e11: 0
-      e12: 7.24e-43
-      e13: 7.24e-43
-      e20: -9.421909e+37
-      e21: 1e-45
-      e22: -0.0000000032972185
-      e23: 1.88962e-40
-      e30: 4.5905e-41
+      e11: 1
+      e12: 0
+      e13: 0.13
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
       e31: 0
-      e32: 7.24e-43
-      e33: 7.29e-43
+      e32: 0
+      e33: 1
   m_TileColorArray:
   - m_RefCount: 69
     m_Data: {r: 1, g: 1, b: 1, a: 1}
@@ -5675,8 +5703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 760.0001, y: -80.89406}
-  m_SizeDelta: {x: 1520.0002, y: 161.78812}
+  m_AnchoredPosition: {x: 760, y: -81.10622}
+  m_SizeDelta: {x: 1520, y: 162.21243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653791449
 MonoBehaviour:
@@ -6723,8 +6751,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 760.0001, y: -758.4703}
-  m_SizeDelta: {x: 1520.0002, y: 161.78812}
+  m_AnchoredPosition: {x: 760, y: -759.5311}
+  m_SizeDelta: {x: 1520, y: 162.21243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239624831
 MonoBehaviour:
@@ -7927,7 +7955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1870015335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7994,6 +8022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1118741337}
     m_Modifications:
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: TreasureItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 450cae0adc6ba3348bd2cdfdd064bbcf, type: 2}
     - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: treasureItem
       value: 
@@ -8141,8 +8173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 260.00006, y: -255.89406}
-  m_SizeDelta: {x: 500.00012, y: 491.78812}
+  m_AnchoredPosition: {x: 260, y: -256.10623}
+  m_SizeDelta: {x: 500, y: 492.21246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928971973
 MonoBehaviour:
@@ -8618,6 +8650,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1118741337}
     m_Modifications:
     - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: HealingItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a3aead06154dbb47933dc88f6b45a62, type: 2}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: healingItem
       value: 
       objectReference: {fileID: 11400000, guid: 5a3aead06154dbb47933dc88f6b45a62, type: 2}
@@ -8627,7 +8663,7 @@ PrefabInstance:
       objectReference: {fileID: 514361144}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
-      value: PaidHeal_Teapot
+      value: FreeHeal_Teapot
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Pivot.x
@@ -8731,6 +8767,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1118741337}
     m_Modifications:
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: HealingItem
+      value: 
+      objectReference: {fileID: 11400000, guid: e246c2738ffeb0446a5943194ed84c6a, type: 2}
     - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: healingItem
       value: 

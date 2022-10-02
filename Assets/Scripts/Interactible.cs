@@ -4,6 +4,7 @@ public class Interactible : MonoBehaviour
 {
     [SerializeField] private InteractionDialog interactionDialog;
 
+    public bool WasInteractedWith {get; set;}
     public enum InteractibleType
     {
         HealingItem,
@@ -11,15 +12,15 @@ public class Interactible : MonoBehaviour
         Entity
     }
 
-    [SerializeField] private HealingItem healingItem;
-    [SerializeField] private Treasure treasureItem;
-    [SerializeField] private Entity entity;
+    public HealingItem HealingItem;
+    public Treasure TreasureItem;
+    public Entity EntityItem;
 
     public InteractibleType TypeOfInteractible;
 
     public void OnInteract()
     {
-        interactionDialog.Initialize();
+        interactionDialog.Initialize(this);
         interactionDialog.gameObject.SetActive(true);
     }
 }
