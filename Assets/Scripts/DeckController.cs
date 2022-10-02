@@ -15,7 +15,7 @@ public class DeckController: MonoBehaviour
     public List<Card> cardsInHand = new List<Card>();
     public List<Card> cardsInDiscard = new List<Card>();
 
-    public void CreateHand()
+    public void CreateHand(CardUI draggedCardUI)
     {
         foreach (Transform cardTransform in cardContainerTransform)
         {
@@ -29,7 +29,10 @@ public class DeckController: MonoBehaviour
         {
             CardUI card = Instantiate<CardUI>(cardPrefab, cardContainerTransform);
             Card nextCard = currentDeck.ElementAt(i);
-            card.InitializeCardForBattle(nextCard);
+            card.Initialize(nextCard, CardUI.CardType.Battle);
+            var dragScript = card.gameObject.GetComponent<CardDrag>();
+            dragScript.DraggedCardUI = draggedCardUI;
+
             cardsInHand.Add(nextCard);
             currentDeck.Remove(nextCard);
             UpdateDeckText();
@@ -38,9 +41,15 @@ public class DeckController: MonoBehaviour
 
     public void DrawCard()
     {
+        if (currentDeck.Count <= 0)
+        {
+            // TODO: We can also ShuffleDiscardPile here.
+            return;
+        }
+
         CardUI card = Instantiate<CardUI>(cardPrefab, cardContainerTransform);
         Card nextCard = currentDeck.ElementAt(0);
-        card.InitializeCardForBattle(nextCard);
+        card.Initialize(nextCard, CardUI.CardType.Battle);
         cardsInHand.Add(nextCard);
         currentDeck.Remove(nextCard);
     }
@@ -54,8 +63,10 @@ public class DeckController: MonoBehaviour
 
     public void ShuffleDiscardPile()
     {
-        currentDeck.Clear();
+        // If for whatever reason, we shuffle discard back into deck before deck is empty, this handles that.
+        cardsInDiscard.AddRange(currentDeck);  
         currentDeck.AddRange(ShuffleDeck(cardsInDiscard));
+        cardsInDiscard.Clear();
     }
 
     public List<Card> ShuffleDeck(List<Card> deck)

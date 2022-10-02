@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class PlayCard : MonoBehaviour
 {
@@ -22,23 +19,23 @@ public class PlayCard : MonoBehaviour
     {
         CardUI thisCard = gameObject.GetComponent<CardUI>();
         Debug.Log("Dropped Card at " + rectTransform.position);
-        Debug.Log("Card Type: " + thisCard.GetCard().cardActionType);
+        Debug.Log("Card Type: " + thisCard.Data.cardActionType);
         //Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity);
         Collider2D hitCollider = Physics2D.OverlapBox(gameObject.transform.position,transform.localScale,0f);
         
         //Check when there is a new collider coming into contact with and Enemy
         if(hitCollider.CompareTag("Enemy"))
         {
-            if (thisCard.GetCard().cardActionType == Card.ActionType.Attack)
+            if (thisCard.Data.cardActionType == Card.ActionType.Attack)
             {
                 EnemyUI enemyUI = hitCollider.gameObject.GetComponent<EnemyUI>();
-                enemyUI.GetEnemy().Damage(thisCard.GetCard().cardValue);
+                enemyUI.GetEnemy().Damage(thisCard.Data.cardValue);
             }
-            else if (thisCard.GetCard().cardActionType == Card.ActionType.Defense)
+            else if (thisCard.Data.cardActionType == Card.ActionType.Defense)
             {
-                GameInstance.Instance.MainPlayer.ModifyDefense(thisCard.GetCard().cardValue);
+                GameInstance.Instance.MainPlayer.ModifyDefense(thisCard.Data.cardValue);
             }
-            else if (thisCard.GetCard().cardActionType == Card.ActionType.Buff)
+            else if (thisCard.Data.cardActionType == Card.ActionType.Buff)
             {
                 // Add Buff Logic
             }

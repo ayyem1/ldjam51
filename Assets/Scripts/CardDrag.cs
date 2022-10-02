@@ -36,7 +36,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
         // Set drag container canvas group params
         DraggedCardUI.gameObject.transform.position = initialPosition;
-        DraggedCardUI.InitializeForDeckBuilder(CardUIData.Data);
+        DraggedCardUI.Initialize(CardUIData.Data, CardUIData.TypeOfCard);
         DraggedCardUI.gameObject.SetActive(true);
 
         // Modify CardUI so that it seems disabled while we are dragging it around.
@@ -63,7 +63,7 @@ public class CardDrag : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
     private void Reset()
     {
-        CardUIData.InitializeForDeckBuilder(DraggedCardUI.Data);
+        CardUIData.Initialize(DraggedCardUI.Data, DraggedCardUI.TypeOfCard);
         CardUIData.Background.color = initialBackgroundColor;
         CardUIData.Border.color = initialBorderColor;
         ResetDragContainer();

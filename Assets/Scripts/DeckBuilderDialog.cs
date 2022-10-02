@@ -13,7 +13,7 @@ public class DeckBuilderDialog : MonoBehaviour
         foreach(var card in playerCards)
         {
             var cardUI = Instantiate<CardUI>(CardPrefab, deckContentRoot);
-            cardUI.InitializeForDeckBuilder(card);
+            cardUI.Initialize(card, CardUI.CardType.Deck);
             var dragScript = cardUI.gameObject.GetComponent<CardDrag>();
             dragScript.DraggedCardUI = DraggedCardUI;
         }
@@ -22,7 +22,7 @@ public class DeckBuilderDialog : MonoBehaviour
         foreach (var card in reserveCards)
         {
             var cardUI = Instantiate<CardUI>(CardPrefab, reserveContentRoot);
-            cardUI.InitializeForDeckBuilder(card);
+            cardUI.Initialize(card, CardUI.CardType.Deck);
             var dragScript = cardUI.gameObject.GetComponent<CardDrag>();
             dragScript.DraggedCardUI = DraggedCardUI;
         }
@@ -46,14 +46,14 @@ public class DeckBuilderDialog : MonoBehaviour
         if (dropLocation == CardDrop.DropLocation.Deck)
         {
             var cardUI = Instantiate<CardUI>(CardPrefab, deckContentRoot);
-            cardUI.InitializeForDeckBuilder(cardData);
+            cardUI.Initialize(cardData, CardUI.CardType.Deck);
             var dragScript = cardUI.gameObject.GetComponent<CardDrag>();
             dragScript.DraggedCardUI = DraggedCardUI;
         }
         else
         {
             var cardUI = Instantiate<CardUI>(CardPrefab, reserveContentRoot);
-            cardUI.InitializeForDeckBuilder(cardData);
+            cardUI.Initialize(cardData, CardUI.CardType.Deck);
             var dragScript = cardUI.gameObject.GetComponent<CardDrag>();
             dragScript.DraggedCardUI = DraggedCardUI;
         }
