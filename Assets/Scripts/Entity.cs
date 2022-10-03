@@ -25,6 +25,7 @@ public class Entity : ScriptableObject
     public Entity[] minions;
     public int RewardAmount;
     public bool isRewardCard;
+    public bool IsEndOfContent;
     [SerializeField] public Card RewardCard;
 
     public ScriptableObject[] UnlockedInteractions;

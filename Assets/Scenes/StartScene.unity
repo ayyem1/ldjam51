@@ -1419,5 +1419,9 @@ PrefabInstance:
       propertyPath: UnlockedInteractionsAtStart.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: c031e534e0ba672459f6951e5749e4a2, type: 2}
+    - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
+      propertyPath: UnlockedInteractionsAtStart.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 27a505d750b372e4f9f7e019d31c27bf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}

@@ -11,12 +11,23 @@ public class BattleDialog : MonoBehaviour
     [SerializeField] private TMP_Text ButtonText;
     private bool isReward;
 
+    private Entity refEntity;
+
     public void InitializeReward(Entity entity, bool isReward)
     {
+        refEntity = entity;
         Title.text = "You Won!";
-        Description.text = entity.LossDialog + "\n\nRewards:\nUnlocked A New Card!\nEarned " + entity.RewardAmount + " Corporate Bucks";
+        if (!entity.IsEndOfContent)
+        {
+            Description.text = entity.LossDialog + "\n\nRewards:\nUnlocked A New Card!\nEarned " + entity.RewardAmount + " Corporate Bucks";
+            ButtonText.text = "Collect";
+        }
+        else
+        {
+            Description.text = entity.LossDialog + "\n\nNotice:\nYou've been acquired by a much larger coporation!";
+            ButtonText.text = "Play Again";
+        }
         Icon.sprite = entity.EntitySprite;
-        ButtonText.text = "Collect";
         GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(entity.RewardAmount);
         GameInstance.Instance.MainPlayer.AddCard(entity.RewardCard);
         gameObject.SetActive(true);
@@ -35,7 +46,7 @@ public class BattleDialog : MonoBehaviour
 
     public void OnButtonPress()
     {
-        if(isReward)
+        if(isReward && refEntity != null && !refEntity.IsEndOfContent)
         {
             SceneManager.LoadScene("MapScene");
         }
