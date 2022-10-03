@@ -16,7 +16,10 @@ MonoBehaviour:
   Description: Maybe it will have a candy
   Icon: {fileID: 0}
   GrantedCorporateBucks: 10
-  GrantedCards: []
+  GrantedCards:
+  - {fileID: 11400000, guid: a9dc44a96e72adb47a7ca69b9663037e, type: 2}
+  - {fileID: 11400000, guid: ea841bfb0e9532046962a88b50b3518f, type: 2}
+  - {fileID: 11400000, guid: 73865fe2f5a7bd6419a1ede47257ae78, type: 2}
   unlockedEntities:
   - {fileID: 11400000, guid: 4e3dd791f4c9eb14e95eacfdadfe56b6, type: 2}
   unlockedTreasures: []
