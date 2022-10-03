@@ -16,23 +16,22 @@ MonoBehaviour:
   StartingDialog: I need to investigate a complaint.
   LossDialog: Clearly, the other party was at fault. Thank you for your time.
   EntitySprite: {fileID: 919324293, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
+  StartingHp: 55
+  MaxHp: 55
   StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
+  StartingDamageValue: 8
+  StartingDefenseIncrementValue: 10
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
-  StartingAttackDebuff: 0
-  StartingDefenseDebuff: 0
-  movePattern: 
-  minions: []
-  RewardAmount: 0
+  StartingAttackDebuff: 4
+  StartingDefenseDebuff: 4
+  movePattern: 040000000500000004000000000000000500000001000000040000000500000000000000
+  minions:
+  - {fileID: 11400000, guid: e4949ba75af149840bc9f44fe866c98b, type: 2}
+  - {fileID: 11400000, guid: 1085435c713ab5141a1c24507ca3aab5, type: 2}
+  RewardAmount: 50
   isRewardCard: 0
+  IsEndOfContent: 0
   RewardCard: {fileID: 0}
-  unlockedEntities:
-  - {fileID: 11400000, guid: df00b79705aee924886d1bc1b56e4bff, type: 2}
-  unlockedTreasures: []
-  unlockedHealingItems: []
   UnlockedInteractions:
   - {fileID: 11400000, guid: df00b79705aee924886d1bc1b56e4bff, type: 2}

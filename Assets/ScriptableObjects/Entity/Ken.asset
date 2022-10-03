@@ -29,12 +29,9 @@ MonoBehaviour:
   movePattern: 0100000000000000000000000100000000000000
   minions:
   - {fileID: 11400000, guid: f68b704acfee3d04ea2236389a6661f4, type: 2}
-  RewardAmount: 0
+  RewardAmount: 40
   isRewardCard: 0
+  IsEndOfContent: 0
   RewardCard: {fileID: 0}
-  unlockedEntities: []
-  unlockedTreasures: []
-  unlockedHealingItems:
-  - {fileID: 11400000, guid: 5a3aead06154dbb47933dc88f6b45a62, type: 2}
   UnlockedInteractions:
   - {fileID: 11400000, guid: 5a3aead06154dbb47933dc88f6b45a62, type: 2}

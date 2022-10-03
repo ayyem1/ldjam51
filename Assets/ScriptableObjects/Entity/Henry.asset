@@ -18,23 +18,21 @@ MonoBehaviour:
   LossDialog: "You\u2019re right, those priorities are more important. I\u2019ll
     wait."
   EntitySprite: {fileID: 873007956, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
-  StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
-  StartingAttackBuff: 0
+  StartingHp: 45
+  MaxHp: 45
+  StartingDefense: 5
+  StartingDamageValue: 8
+  StartingDefenseIncrementValue: 8
+  StartingAttackBuff: 8
   StartingDefenseBuff: 0
   StartingAttackDebuff: 0
   StartingDefenseDebuff: 0
-  movePattern: 
-  minions: []
-  RewardAmount: 0
+  movePattern: 00000000000000000200000000000000010000000100000002000000
+  minions:
+  - {fileID: 11400000, guid: 0034221ae88000141867ab467b77bcab, type: 2}
+  RewardAmount: 40
   isRewardCard: 0
+  IsEndOfContent: 0
   RewardCard: {fileID: 0}
-  unlockedEntities: []
-  unlockedTreasures: []
-  unlockedHealingItems:
-  - {fileID: 11400000, guid: a68833fa9b5e1ef4a9895edd9d3ea928, type: 2}
   UnlockedInteractions:
   - {fileID: 11400000, guid: a68833fa9b5e1ef4a9895edd9d3ea928, type: 2}

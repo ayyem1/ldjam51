@@ -10,26 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
-  m_Name: Slacker 1
+  m_Name: Henrietta
   m_EditorClassIdentifier: 
-  Name: Slacker 1
+  Name: SWOT Girl
   StartingDialog: 
   LossDialog: 
-  EntitySprite: {fileID: 703200692, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 38
-  MaxHp: 38
-  StartingDefense: 0
-  StartingDamageValue: 5
-  StartingDefenseIncrementValue: 10
+  EntitySprite: {fileID: 506620599, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
+  StartingHp: 45
+  MaxHp: 45
+  StartingDefense: 8
+  StartingDamageValue: 8
+  StartingDefenseIncrementValue: 8
   StartingAttackBuff: 0
-  StartingDefenseBuff: 0
-  StartingAttackDebuff: 3
-  StartingDefenseDebuff: 4
-  movePattern: 0500000000000000050000000000000004000000010000000400000001000000
+  StartingDefenseBuff: 16
+  StartingAttackDebuff: 0
+  StartingDefenseDebuff: 0
+  movePattern: 01000000010000000000000003000000000000000000000000000000
   minions: []
   RewardAmount: 0
   isRewardCard: 0
   IsEndOfContent: 0
   RewardCard: {fileID: 0}
-  UnlockedInteractions:
-  - {fileID: 11400000, guid: 6d7b0456c2e6e34438822770798e5c1b, type: 2}
+  UnlockedInteractions: []

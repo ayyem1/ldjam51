@@ -10,23 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
-  m_Name: Slacker 2
+  m_Name: HR Rep 1
   m_EditorClassIdentifier: 
-  Name: SWOT Boy
+  Name: HR Rep 1
   StartingDialog: 
   LossDialog: 
   EntitySprite: {fileID: -956823954, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 16
-  MaxHp: 16
-  StartingDefense: 3
-  StartingDamageValue: 4
-  StartingDefenseIncrementValue: 3
-  StartingAttackBuff: 3
-  StartingDefenseBuff: 3
-  StartingAttackDebuff: 0
-  StartingDefenseDebuff: 3
-  movePattern: 0100000005000000000000000100000003000000
+  StartingHp: 55
+  MaxHp: 55
+  StartingDefense: 0
+  StartingDamageValue: 8
+  StartingDefenseIncrementValue: 10
+  StartingAttackBuff: 0
+  StartingDefenseBuff: 0
+  StartingAttackDebuff: 4
+  StartingDefenseDebuff: 4
+  movePattern: 04000000010000000500000001000000040000000500000000000000
   minions: []
   RewardAmount: 0
   isRewardCard: 0
+  IsEndOfContent: 0
   RewardCard: {fileID: 0}
+  UnlockedInteractions:
+  - {fileID: 11400000, guid: df00b79705aee924886d1bc1b56e4bff, type: 2}

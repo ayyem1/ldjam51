@@ -20,17 +20,19 @@ MonoBehaviour:
   EntitySprite: {fileID: 703200692, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 38
   MaxHp: 38
-  StartingDefense: 4
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
+  StartingDefense: 0
+  StartingDamageValue: 5
+  StartingDefenseIncrementValue: 10
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
   StartingAttackDebuff: 3
   StartingDefenseDebuff: 4
-  movePattern: 
-  minions: []
-  RewardAmount: 0
+  movePattern: 0400000001000000050000000000000005000000000000000400000001000000
+  minions:
+  - {fileID: 11400000, guid: 37554c029c4c99442a2ad23cd494c6d0, type: 2}
+  RewardAmount: 35
   isRewardCard: 0
+  IsEndOfContent: 0
   RewardCard: {fileID: 0}
   UnlockedInteractions:
   - {fileID: 11400000, guid: 6d7b0456c2e6e34438822770798e5c1b, type: 2}
