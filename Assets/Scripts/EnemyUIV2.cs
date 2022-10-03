@@ -27,7 +27,7 @@ public class EnemyUIV2 : MonoBehaviour
     {
         this.refEnemy = refEnemy;
         health.text = $"{refEnemy.Data.StartingHp}/{refEnemy.Data.MaxHp}";
-        enemyIcon.sprite = refEnemy.Data.BattleSprite;
+        enemyIcon.sprite = refEnemy.Data.EntitySprite;
         refEnemy.CurrentHp = refEnemy.Data.StartingHp;
         refEnemy.CurrentDefense = refEnemy.Data.StartingDefense;
         refEnemy.CurrentDamageValue = refEnemy.Data.StartingDamageValue;

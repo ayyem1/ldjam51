@@ -55,7 +55,7 @@ public class InteractionDialog : MonoBehaviour
         {
             Title.text = interactible.EntityItem.Name;
             Description.text = interactible.EntityItem.StartingDialog;
-            Icon.sprite = interactible.EntityItem.BattleSprite;
+            Icon.sprite = interactible.EntityItem.EntitySprite;
             ButtonText.text = "Ready";
             ActionButton.interactable = true;
         }

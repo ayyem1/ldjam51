@@ -15,8 +15,7 @@ MonoBehaviour:
   Name: 
   StartingDialog: 
   LossDialog: 
-  BattleSprite: {fileID: -1553028561, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  MapSprite: {fileID: 0}
+  EntitySprite: {fileID: -1553028561, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 0
   MaxHp: 0
   StartingDefense: 0

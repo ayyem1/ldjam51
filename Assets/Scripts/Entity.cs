@@ -8,8 +8,7 @@ public class Entity : ScriptableObject
     public string Name;
     public string StartingDialog;
     public string LossDialog;
-    public Sprite BattleSprite;
-    public Sprite MapSprite;
+    public Sprite EntitySprite;
     [Min(0f)] public float StartingHp;
     [Min(1f)] public float MaxHp;
 

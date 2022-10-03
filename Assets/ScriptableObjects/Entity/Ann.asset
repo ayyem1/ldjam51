@@ -15,8 +15,7 @@ MonoBehaviour:
   Name: Ann From Accounting
   StartingDialog: 
   LossDialog: Tch. These look like the correct invoices, I must have misplaced them.
-  BattleSprite: {fileID: -546294896, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  MapSprite: {fileID: 0}
+  EntitySprite: {fileID: -546294896, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 3
   MaxHp: 16
   StartingDefense: 0

@@ -4062,9 +4062,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: {fileID: 348919980}
   Description: {fileID: 409295994}
-  coinReawrdAmount: {fileID: 0}
-  rewardIcon: {fileID: 0}
-  rewardName: {fileID: 0}
   Icon: {fileID: 1928971974}
   ActionButton: {fileID: 0}
   ButtonText: {fileID: 700424975}
@@ -8012,7 +8009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1870015335
 RectTransform:
   m_ObjectHideFlags: 0

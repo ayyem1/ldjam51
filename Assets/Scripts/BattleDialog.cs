@@ -15,7 +15,7 @@ public class BattleDialog : MonoBehaviour
     {
         Title.text = "You Won!";
         Description.text = entity.LossDialog + "\n\nRewards:\nUnlocked A New Card!\nEarned " + entity.RewardAmount + " Corporate Bucks";
-        Icon.sprite = entity.BattleSprite;
+        Icon.sprite = entity.EntitySprite;
         ButtonText.text = "Collect";
         GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(entity.RewardAmount);
         GameInstance.Instance.MainPlayer.AddCard(entity.RewardCard);
