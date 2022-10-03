@@ -12,12 +12,34 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Transform popUpTransform;
     [SerializeField] private Sprite[] actionTypeSpriteArray;
     [SerializeField] private BattleDialog dialogBox;
+    [SerializeField] private FTUEDialog ftueDialog;
     private Sprite sprite;
     private Vector3 position;
 
     public DeckController DeckController;
 
     public void Start()
+    {
+        if (GameInstance.Instance.Ftue.IsFTUE1Done && !GameInstance.Instance.Ftue.IsFTUE2Done)
+        {
+            ftueDialog.Initialize(GameInstance.Instance.Ftue.FTUETitle, GameInstance.Instance.Ftue.FTUE2Description);
+            ftueDialog.gameObject.SetActive(true);
+            GameInstance.Instance.Ftue.IsFTUE2Done = true;
+        }
+        else
+        {
+            InitGame();
+        }
+
+    }
+
+    public void OnFtueDone()
+    {
+        ftueDialog.gameObject.SetActive(false);
+        InitGame();
+    }
+
+    public void InitGame()
     {
         var activeEntity = GameInstance.Instance.SelectedEntity;
         foreach (Entity minion in activeEntity.minions)
