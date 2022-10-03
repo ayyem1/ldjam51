@@ -10,7 +10,10 @@ public class InteractibleManager : MonoBehaviour
         {
             // Probably better to grey out items.
             var interactible = child.GetComponent<Interactible>();
-            interactible.gameObject.SetActive(!GameInstance.Instance.Interactions.Contains(interactible.gameObject.name));
+            if (interactible.TypeOfInteractible != Interactible.InteractibleType.Entity)
+            {
+                interactible.gameObject.SetActive(!GameInstance.Instance.Interactions.Contains(interactible.gameObject.name));
+            }
         }
     }
 }
