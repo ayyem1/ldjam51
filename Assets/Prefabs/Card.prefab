@@ -470,11 +470,16 @@ MonoBehaviour:
   Title: {fileID: 9211564806125160477}
   Icon: {fileID: 8790080954833117810}
   Description: {fileID: 1681579557764470455}
-  battleScene_cardName: {fileID: 0}
-  battleScene_cardValue: {fileID: 0}
-  battleScene_cardIcon: {fileID: 0}
+  ActionTypeIcon: {fileID: 0}
   Background: {fileID: 3401812083433911676}
   Border: {fileID: 1180773266534624014}
+  actionTypeSpriteArray:
+  - {fileID: -816279357, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
+  - {fileID: -1623977274, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
+  - {fileID: -11263988, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
+  - {fileID: 119961502, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
+  - {fileID: -1572499585, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
+  - {fileID: 1055920815, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
 --- !u!114 &3939741806216566573
 MonoBehaviour:
   m_ObjectHideFlags: 0
