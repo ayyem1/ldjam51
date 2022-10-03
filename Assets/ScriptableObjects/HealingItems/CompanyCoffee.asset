@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Company Coffee
   Description: You pay for each cup at this company!
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: c3e833533a353f6478af966cfd807846, type: 3}
   HealingAmount: 10
   HealingPrice: 10
   IsSingleUse: 0
