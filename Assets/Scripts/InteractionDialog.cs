@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -62,7 +63,18 @@ public class InteractionDialog : MonoBehaviour
             Treasure treasureItem = (Treasure)interactible.referenceInteraction;
 
             Title.text = treasureItem.Name;
-            Description.text = $"{treasureItem.Description}\n\nRewards:\nUnlocked A New Card!\nEarned {treasureItem.GrantedCorporateBucks} Corporate Bucks";
+            if (treasureItem.GrantedCards.Length > 1)
+            {
+                Description.text = $"{treasureItem.Description}\n\nRewards:\nUnlocked New Cards!\nEarned {treasureItem.GrantedCorporateBucks} Corporate Bucks";
+            }
+            else if (treasureItem.GrantedCards.Length <= 0)
+            {
+                Description.text = $"{treasureItem.Description}\n\nRewards:\nEarned {treasureItem.GrantedCorporateBucks} Corporate Bucks";
+            }
+            else
+            {
+                Description.text = $"{treasureItem.Description}\n\nRewards:\nUnlocked A New Card!\nEarned {treasureItem.GrantedCorporateBucks} Corporate Bucks";
+            }
             Icon.sprite = treasureItem.Icon;
             ButtonText.text = "Collect";
             ActionButton.interactable = true;

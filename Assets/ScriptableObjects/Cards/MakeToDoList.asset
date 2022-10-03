@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6111a140d47bd489af0eec0c1fcee2, type: 3}
   m_Name: MakeToDoList
   m_EditorClassIdentifier: 
-  Title: 
+  Title: Made a TodoList
   Description: 
   Icon: {fileID: 93768810, guid: fd1efba332984854d927b11a4429cd19, type: 3}
-  cardActionType: 0
-  cardValue: 0
+  cardActionType: 3
+  cardValue: 6
   Buffs: []

@@ -32,6 +32,6 @@ MonoBehaviour:
   RewardAmount: 40
   isRewardCard: 0
   IsEndOfContent: 0
-  RewardCard: {fileID: 0}
+  RewardCard: {fileID: 11400000, guid: 5c6fbe755c3f8d843b43dccdfe6a0c19, type: 2}
   UnlockedInteractions:
   - {fileID: 11400000, guid: 5a3aead06154dbb47933dc88f6b45a62, type: 2}

@@ -16,7 +16,10 @@ MonoBehaviour:
   Description: Who lugs around this much stuff?
   Icon: {fileID: 0}
   GrantedCorporateBucks: 5
-  GrantedCards: []
+  GrantedCards:
+  - {fileID: 11400000, guid: 722847578cb584e4aae439739ae4c54e, type: 2}
+  - {fileID: 11400000, guid: 92d6d0d673acc654b8827b9991faad49, type: 2}
+  - {fileID: 11400000, guid: d2c8395301dc46f49a865ea723c5ce42, type: 2}
   unlockedEntities:
   - {fileID: 11400000, guid: 97c8be3f3d7bf3148b23e228b9eb0ae6, type: 2}
   unlockedTreasures: []
