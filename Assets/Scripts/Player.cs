@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [Min(0f)] [SerializeField] private int minNumCardsInDeck;
     [Min(0f)] [SerializeField] private int maxNumCardsInDeck;
     [SerializeField] private Card[] startingCards;
-    [Min(0f)] [SerializeField] private int startingMana = 3;
+    [Min(0f)] [SerializeField] private int startingMana = 5;
     public string Name { get; set; }
     public float CurrentHp { get; set; }
     public float CurrentDefense { get; set; }
