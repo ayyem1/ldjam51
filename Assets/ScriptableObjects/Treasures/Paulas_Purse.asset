@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Paula's Purse
   Description: Maybe it will have a candy
+  Icon: {fileID: 0}
   GrantedCorporateBucks: 10
   GrantedCards: []
+  unlockedEntities:
+  - {fileID: 11400000, guid: 4e3dd791f4c9eb14e95eacfdadfe56b6, type: 2}
+  unlockedTreasures: []
+  unlockedHealingItems: []

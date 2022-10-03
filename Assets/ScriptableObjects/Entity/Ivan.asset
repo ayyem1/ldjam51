@@ -30,3 +30,7 @@ MonoBehaviour:
   RewardAmount: 0
   isRewardCard: 0
   RewardCard: {fileID: 0}
+  unlockedEntities:
+  - {fileID: 11400000, guid: ad8a9b736e37d5e40bfca9486ca28463, type: 2}
+  unlockedTreasures: []
+  unlockedHealingItems: []

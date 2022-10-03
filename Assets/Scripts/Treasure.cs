@@ -8,4 +8,8 @@ public class Treasure : ScriptableObject
     public Sprite Icon;
     public int GrantedCorporateBucks;
     public Card[] GrantedCards;
+
+    public Entity[] unlockedEntities;
+    public Treasure[] unlockedTreasures;
+    public HealingItem[] unlockedHealingItems;
 }

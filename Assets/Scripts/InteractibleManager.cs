@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class InteractibleManager : MonoBehaviour
 {
-    [SerializeField] private Interactible[] interactibles;
-
     void Update()
     {
         foreach(Transform child in transform)

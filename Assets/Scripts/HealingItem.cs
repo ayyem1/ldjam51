@@ -9,4 +9,8 @@ public class HealingItem : ScriptableObject
     [Min(0f)] public float HealingAmount;
     [Min(0f)] public int HealingPrice;
     public bool IsSingleUse;
+    public Entity[] unlockedEntities;
+    public Treasure[] unlockedTreasures;
+    public HealingItem[] unlockedHealingItems;
+    public bool IsUnlocked { get; set; }
 }

@@ -15,6 +15,10 @@ MonoBehaviour:
   Name: Company Coffee
   Description: You pay for each cup at this company!
   Icon: {fileID: 0}
-  HealingAmount: 15
+  HealingAmount: 10
   HealingPrice: 10
   IsSingleUse: 0
+  unlockedEntities:
+  - {fileID: 11400000, guid: 5999c2cd77abe3b4f922143628684ec8, type: 2}
+  unlockedTreasures: []
+  unlockedHealingItems: []

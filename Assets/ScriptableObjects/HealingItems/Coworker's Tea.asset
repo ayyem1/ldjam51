@@ -15,6 +15,10 @@ MonoBehaviour:
   Name: Coworker's Tea
   Description: They were kind enough to share with you!
   Icon: {fileID: 0}
-  HealingAmount: 15
+  HealingAmount: 20
   HealingPrice: 0
   IsSingleUse: 1
+  unlockedEntities:
+  - {fileID: 11400000, guid: df00b79705aee924886d1bc1b56e4bff, type: 2}
+  unlockedTreasures: []
+  unlockedHealingItems: []
