@@ -27,8 +27,5 @@ public class Entity : ScriptableObject
     public bool isRewardCard;
     [SerializeField] public Card RewardCard;
 
-    public Entity[] unlockedEntities;
-    public Treasure[] unlockedTreasures;
-    public HealingItem[] unlockedHealingItems;
     public ScriptableObject[] UnlockedInteractions;
 }

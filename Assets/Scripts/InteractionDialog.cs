@@ -97,7 +97,10 @@ public class InteractionDialog : MonoBehaviour
             {
                 GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(-healingItem.HealingPrice);
                 GameInstance.Instance.MainPlayer.Heal(healingItem.HealingAmount);
-                GameInstance.Instance.SetInteractionToCompleted(healingItem.name);
+                if (healingItem.IsSingleUse)
+                {
+                    GameInstance.Instance.SetInteractionToCompleted(healingItem.name);
+                }
                 //UpdateUnlockedInteractions();
                 gameObject.SetActive(false);
             }
