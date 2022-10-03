@@ -18,12 +18,12 @@ public class GameInstance : Singleton<GameInstance>
     public void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        Ftue.Reset();
         Reset();
     }
 
     public void Reset()
     {
-        Ftue.Reset();
         MainPlayer.InitializePlayer();
         StatesPerInteraction.Clear();
         foreach (var interaction in UnlockedInteractionsAtStart)
