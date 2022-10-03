@@ -8,17 +8,17 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T instance;
     private static object singletonLock = new object();
-    private static bool applicationIsQuitting = false;
+    //private static bool applicationIsQuitting = false;
 
     public static T Instance
     {
         get
         {
-            if (applicationIsQuitting)
-            {
-                Debug.LogWarning($"[Singleton] Instance {typeof(T)} already destroyed on application quit. Won't create again and will return null.");
-                return null;
-            }
+            //if (applicationIsQuitting)
+            //{
+            //    Debug.LogWarning($"[Singleton] Instance {typeof(T)} already destroyed on application quit. Won't create again and will return null.");
+            //    return null;
+            //}
 
             lock (singletonLock)
             {
@@ -50,6 +50,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
     }
 
+    /**
     private static bool IsDontDestroyOnLoad()
     {
         if (instance == null)
@@ -64,18 +65,18 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
         return false;
     }
-
-    public void OnDestroy()
-    {
-        /**
-         * When Unity quits, it destroys objects in a random order. 
-         * In principle a Singleton is only destroyed when application quits.
-         * If any script calls Instance after it has been destroyed, it will create a buggy ghost object.
-         * This prevents that from happening.
-         */
-        if (!IsDontDestroyOnLoad())
-        {
-            applicationIsQuitting = true;
-        }
-    }
+    */
+    //public void OnDestroy()
+    //{
+    //    /**
+    //     * When Unity quits, it destroys objects in a random order. 
+    //     * In principle a Singleton is only destroyed when application quits.
+    //     * If any script calls Instance after it has been destroyed, it will create a buggy ghost object.
+    //     * This prevents that from happening.
+    //     */
+    //    if (!IsDontDestroyOnLoad())
+    //    {
+    //        applicationIsQuitting = true;
+    //    }
+    //}
 }

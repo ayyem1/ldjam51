@@ -25,9 +25,15 @@ public class InteractionDialog : MonoBehaviour
                 Description.text = $"{Description.text}\n\nCost: {interactible.HealingItem.HealingPrice} Corporate Bucks";
             }
             Icon.sprite = interactible.HealingItem.Icon;
-            if (interactible.HealingItem.HealingPrice <= 0)
+            if (GameInstance.Instance.MainPlayer.CurrentHp == GameInstance.Instance.MainPlayer.MaxHP)
+            {
+                ButtonText.text = $"At Full Health";
+                ActionButton.interactable = false;
+            }
+            else if (interactible.HealingItem.HealingPrice <= 0)
             {
                 ButtonText.text = "Collect";
+                ActionButton.interactable = true;
             }
             else
             {
