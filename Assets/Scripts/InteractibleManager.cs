@@ -6,9 +6,10 @@ public class InteractibleManager : MonoBehaviour
 
     void Update()
     {
-        foreach(Interactible interactible in interactibles)
+        foreach(Transform child in transform)
         {
             // Probably better to grey out items.
+            var interactible = child.GetComponent<Interactible>();
             interactible.gameObject.SetActive(!GameInstance.Instance.Interactions.Contains(interactible.gameObject.name));
         }
     }

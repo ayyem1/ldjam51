@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d365901db91f2ca47ab6584974fbaa88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHp: 3
+  startingHp: 60
   maxHp: 60
   startingCorporateBucksAmount: 10
   minNumCardsInDeck: 8
