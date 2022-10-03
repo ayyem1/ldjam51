@@ -16,20 +16,20 @@ MonoBehaviour:
   StartingDialog: Time for your annual performance review.
   LossDialog: Great Job! Keep it up! No Notes.
   EntitySprite: {fileID: -857628918, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
+  StartingHp: 70
+  MaxHp: 70
   StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
+  StartingDamageValue: 12
+  StartingDefenseIncrementValue: 4
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
   StartingAttackDebuff: 0
   StartingDefenseDebuff: 0
-  movePattern: 
+  movePattern: 0100000000000000010000000100000000000000
   minions: []
-  RewardAmount: 0
-  isRewardCard: 0
-  RewardCard: {fileID: 0}
+  RewardAmount: 50
+  isRewardCard: 1
+  RewardCard: {fileID: 11400000, guid: d331728edd7e7e64c8c2ad98b5e1ce22, type: 2}
   unlockedEntities:
   - {fileID: 11400000, guid: 27a505d750b372e4f9f7e019d31c27bf, type: 2}
   unlockedTreasures: []

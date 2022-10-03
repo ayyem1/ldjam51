@@ -28,10 +28,9 @@ MonoBehaviour:
   movePattern: 000000000200000003000000010000000400000005000000
   minions:
   - {fileID: 11400000, guid: 2367b368c1a63cf49b0c406f67298be2, type: 2}
-  - {fileID: 11400000, guid: b4a9ed1cc0582374f96974e9a7d63588, type: 2}
   RewardAmount: 22
   isRewardCard: 1
-  RewardCard: {fileID: 0}
+  RewardCard: {fileID: 11400000, guid: 068e2c8a77486174da273d5420c337be, type: 2}
   unlockedEntities:
   - {fileID: 11400000, guid: 8bcfcc2577cd57144b44b998215f917d, type: 2}
   - {fileID: 11400000, guid: 4cdaa2248cc73764382066c8054d49eb, type: 2}

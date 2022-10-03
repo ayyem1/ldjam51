@@ -16,20 +16,22 @@ MonoBehaviour:
   StartingDialog: "I don\u2019t have time to look over that software approval request."
   LossDialog: My manager informed me that I have to make this my top priority.
   EntitySprite: {fileID: -518557361, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
+  StartingHp: 48
+  MaxHp: 48
   StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
+  StartingDamageValue: 8
+  StartingDefenseIncrementValue: 4
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
   StartingAttackDebuff: 0
   StartingDefenseDebuff: 0
-  movePattern: 
-  minions: []
-  RewardAmount: 0
+  movePattern: 000000000000000001000000000000000100000001000000
+  minions:
+  - {fileID: 11400000, guid: ed15fab170c7ba747b8e21240bda5750, type: 2}
+  - {fileID: 11400000, guid: 7f84ded21a8441d41a09966a17f01e36, type: 2}
+  RewardAmount: 30
   isRewardCard: 0
-  RewardCard: {fileID: 0}
+  RewardCard: {fileID: 11400000, guid: 49c595377619afa44b7356a81e94a1f9, type: 2}
   unlockedEntities:
   - {fileID: 11400000, guid: ad8a9b736e37d5e40bfca9486ca28463, type: 2}
   unlockedTreasures: []

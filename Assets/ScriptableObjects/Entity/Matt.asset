@@ -17,20 +17,22 @@ MonoBehaviour:
     top of the list."
   LossDialog: "Okay, Okay. It\u2019ll be done in the next hour."
   EntitySprite: {fileID: -1909677367, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
+  StartingHp: 40
+  MaxHp: 40
   StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
+  StartingDamageValue: 5
+  StartingDefenseIncrementValue: 4
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
   StartingAttackDebuff: 0
   StartingDefenseDebuff: 0
-  movePattern: 
-  minions: []
+  movePattern: 0000000001000000
+  minions:
+  - {fileID: 11400000, guid: 2e2650ae23a025d459076ecd989a6009, type: 2}
+  - {fileID: 11400000, guid: e833d9298e644e24b88553e140143dd8, type: 2}
   RewardAmount: 0
   isRewardCard: 0
-  RewardCard: {fileID: 0}
+  RewardCard: {fileID: 11400000, guid: 2943fd2123b52d746ad17244f9619996, type: 2}
   unlockedEntities: []
   unlockedTreasures:
   - {fileID: 11400000, guid: 6a445d56e27b2584d86e24cef1edf681, type: 2}

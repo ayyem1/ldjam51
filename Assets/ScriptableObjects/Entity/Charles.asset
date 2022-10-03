@@ -16,17 +16,21 @@ MonoBehaviour:
   StartingDialog: This Isn't My Mistake. It's Yours! You Better Explain This NOW!!!
   LossDialog: Oh No. Was this my fault?... There is still one more thing I can do!
   EntitySprite: {fileID: -1561237945, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
+  StartingHp: 100
+  MaxHp: 100
   StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
-  StartingAttackBuff: 0
-  StartingDefenseBuff: 0
-  StartingAttackDebuff: 0
-  StartingDefenseDebuff: 0
-  movePattern: 
+  StartingDamageValue: 5
+  StartingDefenseIncrementValue: 6
+  StartingAttackBuff: 7
+  StartingDefenseBuff: 4
+  StartingAttackDebuff: 4
+  StartingDefenseDebuff: 7
+  movePattern: 0200000000000000010000000100000000000000050000000000000001000000010000000300000001000000040000000100000000000000
   minions: []
   RewardAmount: 0
   isRewardCard: 0
   RewardCard: {fileID: 0}
+  unlockedEntities: []
+  unlockedTreasures: []
+  unlockedHealingItems: []
+  UnlockedInteractions: []
