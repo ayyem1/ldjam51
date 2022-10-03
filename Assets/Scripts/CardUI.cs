@@ -63,15 +63,15 @@ public class CardUI : MonoBehaviour
         {
             Title.text = data.Title;
             Icon.sprite = data.Icon;
-            if (cardType == CardType.Deck)
-            {
-                Description.text = data.Description;
-            }
-            else
-            {
-                Description.text = Data.cardValue.ToString();
-                ActionTypeIcon.sprite = sprite;
-            }
+            //if (cardType == CardType.Deck)
+            //{
+            //    Description.text = data.Description;
+            //}
+            //else
+            //{
+            Description.text = Data.cardValue.ToString();
+            ActionTypeIcon.sprite = sprite;
+            //}
         }
     }
 

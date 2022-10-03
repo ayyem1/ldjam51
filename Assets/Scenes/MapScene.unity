@@ -8671,7 +8671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996099ba802b91f42b763dec57609c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardPrefab: {fileID: 4689816223733265349, guid: 2ef2e8667d0c469429d2ea79777cd5a1, type: 3}
+  CardPrefab: {fileID: 4689816223733265349, guid: 8a20b1501c25f4947aaafaf05e24b8e5, type: 3}
   deckContentRoot: {fileID: 307830826}
   reserveContentRoot: {fileID: 1569540004}
   DraggedCardUI: {fileID: 1286075850}
@@ -10152,7 +10152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 760, y: -41.829712}
+  m_AnchoredPosition: {x: 760, y: -41.829666}
   m_SizeDelta: {x: 1520.0002, y: 83.65933}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107266791
