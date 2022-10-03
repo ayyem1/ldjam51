@@ -22,3 +22,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5999c2cd77abe3b4f922143628684ec8, type: 2}
   unlockedTreasures: []
   unlockedHealingItems: []
+  UnlockedInteractions:
+  - {fileID: 11400000, guid: 5999c2cd77abe3b4f922143628684ec8, type: 2}

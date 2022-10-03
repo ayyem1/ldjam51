@@ -10,6 +10,8 @@ public class GameInstance : Singleton<GameInstance>
 
     public Entity SelectedEntity { get; set; }
 
+    public ScriptableObject[] UnlockedInteractionsAtStart;
+
     // Note: We don't support duplicate interactions. If we want to allow for that, we need to create UUIDs for each instance of the interaction.
     public Dictionary<string, Interactible.State> StatesPerInteraction = new Dictionary<string, Interactible.State>();
 
@@ -24,6 +26,10 @@ public class GameInstance : Singleton<GameInstance>
         // Add Ann to UnlockedInteractions.
         MainPlayer.InitializePlayer();
         StatesPerInteraction.Clear();
+        foreach (var interaction in UnlockedInteractionsAtStart)
+        {
+            StatesPerInteraction[interaction.name] = Interactible.State.Unlocked;
+        }
         SelectedEntity = null;
     }
 
@@ -31,6 +37,17 @@ public class GameInstance : Singleton<GameInstance>
     {
         SelectedEntity = selectedEntity;
         SceneManager.LoadScene("BattleScene");
+    }
+
+    public Interactible.State GetState(string interactionName)
+    {
+        if (StatesPerInteraction.ContainsKey(interactionName))
+        {
+            return StatesPerInteraction[interactionName];
+        }
+
+        Debug.LogError("Didn't find state.");
+        return Interactible.State.NotUnlocked;
     }
 
     public void InitializeStateInteraction(Interactible interactible)
@@ -47,10 +64,10 @@ public class GameInstance : Singleton<GameInstance>
         {
             StatesPerInteraction[interactionName] = Interactible.State.Unlocked;
         }
-        else
-        {
-            Debug.Log("Failed to unlock interaction.");
-        }
+        //else
+        //{
+        //    Debug.Log("Failed to unlock interaction.");
+        //}
     }
 
     public void SetInteractionToStarted(string interactionName)
@@ -59,10 +76,10 @@ public class GameInstance : Singleton<GameInstance>
         {
             StatesPerInteraction[interactionName] = Interactible.State.Started;
         }
-        else
-        {
-            Debug.Log("Failed to start interaction.");
-        }
+        //else
+        //{
+        //    Debug.Log("Failed to start interaction.");
+        //}
     }
 
     public void SetInteractionToCompleted(string interactionName)
@@ -71,9 +88,9 @@ public class GameInstance : Singleton<GameInstance>
         {
             StatesPerInteraction[interactionName] = Interactible.State.Completed;
         }
-        else
-        {
-            Debug.Log("Failed to complete interaction.");
-        }
+        //else
+        //{
+        //    Debug.Log("Failed to complete interaction.");
+        //}
     }
 }

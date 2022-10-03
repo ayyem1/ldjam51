@@ -78,7 +78,10 @@ public class Player : MonoBehaviour
         {
             ReserveCards.Add(card);
         }*/
-        ReserveCards.Add(card);
+        if (card != null)
+        {
+            ReserveCards.Add(card);
+        }
     }
 
     public void Heal(float healAmount)

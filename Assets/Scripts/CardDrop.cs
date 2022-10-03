@@ -19,6 +19,11 @@ public class CardDrop : MonoBehaviour, IDropHandler
         }
         
         var draggedCardUI = eventData.pointerDrag.GetComponent<CardDrag>();
+        if (draggedCardUI == null)
+        {
+            return;
+        }
+
         if (!draggedCardUI.CardUIData.transform.IsChildOf(transform) && IsDropAllowed(draggedCardUI))
         {
             // Check if deck can be reduced or added to.

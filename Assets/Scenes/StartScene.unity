@@ -1278,5 +1278,13 @@ PrefabInstance:
       propertyPath: MainPlayer
       value: 
       objectReference: {fileID: 1884040977}
+    - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
+      propertyPath: UnlockedInteractionsAtStart.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
+      propertyPath: UnlockedInteractionsAtStart.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c031e534e0ba672459f6951e5749e4a2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
