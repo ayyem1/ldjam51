@@ -1413,7 +1413,7 @@ PrefabInstance:
       objectReference: {fileID: 1884040977}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.data[0]
@@ -1422,15 +1422,15 @@ PrefabInstance:
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 62fa3d53aa3f7a5459b380f5e019a801, type: 2}
+      objectReference: {fileID: 11400000, guid: 27a505d750b372e4f9f7e019d31c27bf, type: 2}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 6a445d56e27b2584d86e24cef1edf681, type: 2}
+      objectReference: {fileID: 11400000, guid: df00b79705aee924886d1bc1b56e4bff, type: 2}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: a68833fa9b5e1ef4a9895edd9d3ea928, type: 2}
+      objectReference: {fileID: 11400000, guid: 62fa3d53aa3f7a5459b380f5e019a801, type: 2}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.data[4]
       value: 
