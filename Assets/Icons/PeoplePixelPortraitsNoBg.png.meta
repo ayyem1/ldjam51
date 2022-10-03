@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 6d12648eafd345349b9c248238176ef9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Harriet
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 962
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115346b1cf3c6d347833e4ec7ad25250
+      internalID: 919324293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mary
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 962
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47c42ad0fdb31145ac11a550497b72d
+      internalID: -1553028561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ivan
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 705
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad940bc3a8f91b4e8537c50e082f8b0
+      internalID: -518557361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Charles
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 164
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d833c5be5b7fa549a90e4178f497284
+      internalID: -1561237945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barb
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 705
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61dc6c413045d4478a79fd8d9029872
+      internalID: 1222552468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ann
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 962
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4cf21a27ffa21f45bbaa0647049f88f
+      internalID: -546294896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Henry
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 432
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa05d47207856f43b0dcd63728fe9a7
+      internalID: 873007956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Steve
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 166
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2e8d183a51ade4ca4ab68780ae0ea3
+      internalID: 703200692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ken
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 158
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f735ce2073a1ee448847bfd0fee76b24
+      internalID: 1567618723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Paul
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 432
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d7c8e10030f5d47993bc5abb289c5e
+      internalID: -857628918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Matt
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 695
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e924f4e288334543a3e747eddc416c5
+      internalID: -1909677367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Charles: -1561237945
+      Steve: 703200692
+      Ivan: -518557361
+      Barb: 1222552468
+      Ken: 1567618723
+      Paul: -857628918
+      Harriet: 919324293
+      Ann: -546294896
+      Mary: -1553028561
+      Henry: 873007956
+      Matt: -1909677367
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

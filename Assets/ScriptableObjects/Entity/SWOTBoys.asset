@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
-  m_Name: Ann
+  m_Name: SWOTBoys
   m_EditorClassIdentifier: 
-  Name: Ann From Accounting
+  Name: 
   StartingDialog: 
-  LossDialog: Tch. These look like the correct invoices, I must have misplaced them.
-  BattleSprite: {fileID: -546294896, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
+  LossDialog: 
+  BattleSprite: {fileID: 0}
   MapSprite: {fileID: 0}
-  StartingHp: 3
-  MaxHp: 16
+  StartingHp: 0
+  MaxHp: 0
   StartingDefense: 0
-  StartingDamageValue: 3
-  StartingDefenseIncrementValue: 3
+  StartingDamageValue: 0
+  StartingDefenseIncrementValue: 0
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
   StartingAttackDebuff: 0
   StartingDefenseDebuff: 0
-  movePattern: 000000000200000003000000010000000400000005000000
+  movePattern: 
   minions: []
-  RewardAmount: 22
-  isRewardCard: 1
+  RewardAmount: 0
+  isRewardCard: 0
   RewardCard: {fileID: 0}
