@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
-  m_Name: Barb
+  m_Name: Betty
   m_EditorClassIdentifier: 
-  Name: Balance Sheet Barb
-  StartingDialog: Your numbers don't add up!
-  LossDialog: Oh! It seems like one of my spreadsheet functions was deleted by accident.
+  Name: Balance Sheet Betty
+  StartingDialog: 
+  LossDialog: 
   EntitySprite: {fileID: 1222552468, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 24
   MaxHp: 24
@@ -26,10 +26,8 @@ MonoBehaviour:
   StartingAttackDebuff: 0
   StartingDefenseDebuff: 0
   movePattern: 0000000001000000000000000100000001000000
-  minions:
-  - {fileID: 11400000, guid: 19b6f24548940074c90733e5caff23c5, type: 2}
-  RewardAmount: 30
-  isRewardCard: 1
-  RewardCard: {fileID: 11400000, guid: 390668aabce2c66408e8d33424011c99, type: 2}
-  UnlockedInteractions:
-  - {fileID: 11400000, guid: 62fa3d53aa3f7a5459b380f5e019a801, type: 2}
+  minions: []
+  RewardAmount: 0
+  isRewardCard: 0
+  RewardCard: {fileID: 0}
+  UnlockedInteractions: []
