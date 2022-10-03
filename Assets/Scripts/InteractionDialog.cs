@@ -2,14 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class InteractionDialog : MonoBehaviour
 {
     [SerializeField] private TMP_Text Title;
     [SerializeField] private TMP_Text Description;
-    [SerializeField] private TMP_Text coinReawrdAmount;
-    [SerializeField] private Image rewardIcon;
-    [SerializeField] private Image rewardName;
     [SerializeField] private Image Icon;
     [SerializeField] private Button ActionButton;
     [SerializeField] private TMP_Text ButtonText;
@@ -22,6 +20,10 @@ public class InteractionDialog : MonoBehaviour
         {
             Title.text = interactible.HealingItem.Name;
             Description.text = interactible.HealingItem.Description;
+            if (interactible.HealingItem.HealingPrice > 0)
+            {
+                Description.text = $"{Description.text}\n\nCost: {interactible.HealingItem.HealingPrice} Corporate Bucks";
+            }
             Icon.sprite = interactible.HealingItem.Icon;
             if (interactible.HealingItem.HealingPrice <= 0)
             {
@@ -29,15 +31,25 @@ public class InteractionDialog : MonoBehaviour
             }
             else
             {
-                ButtonText.text = $"Purchase ({interactible.HealingItem.HealingPrice})";
+                if (GameInstance.Instance.MainPlayer.CurrentCorporateBucksAmount < interactible.HealingItem.HealingPrice)
+                {
+                    ButtonText.text = "Not Enough Bucks";
+                    ActionButton.interactable = false;
+                }
+                else
+                {
+                    ButtonText.text = $"Purchase ({interactible.HealingItem.HealingPrice})";
+                    ActionButton.interactable = true;
+                }
             }
         }
         else if (interactible.TypeOfInteractible == Interactible.InteractibleType.Treasure)
         {
             Title.text = interactible.TreasureItem.Name;
-            Description.text = interactible.TreasureItem.Description;
+            Description.text = $"{interactible.TreasureItem.Description}\n\nRewards:\nUnlocked A New Card!\nEarned {interactible.TreasureItem.GrantedCorporateBucks} Corporate Bucks";
             Icon.sprite = interactible.TreasureItem.Icon;
             ButtonText.text = "Collect";
+            ActionButton.interactable = true;
         }
         else
         {
@@ -45,6 +57,7 @@ public class InteractionDialog : MonoBehaviour
             Description.text = interactible.EntityItem.StartingDialog;
             Icon.sprite = interactible.EntityItem.BattleSprite;
             ButtonText.text = "Ready";
+            ActionButton.interactable = true;
         }
     }
 
@@ -63,7 +76,7 @@ public class InteractionDialog : MonoBehaviour
             var currentHP = GameInstance.Instance.MainPlayer.CurrentHp;
             if (currentCorporateBucks >= refInteractble.HealingItem.HealingPrice && currentHP < GameInstance.Instance.MainPlayer.MaxHP)
             {
-                GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(refInteractble.HealingItem.HealingPrice);
+                GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(-refInteractble.HealingItem.HealingPrice);
                 GameInstance.Instance.MainPlayer.Heal(refInteractble.HealingItem.HealingAmount);
                 if (refInteractble.HealingItem.IsSingleUse)
                 {

@@ -70,14 +70,15 @@ public class Player : MonoBehaviour
 
     public void AddCard(Card card)
     {
-        if (CardsInDeck.Count < MaxDeckCount)
+        /*if (CardsInDeck.Count < MaxDeckCount)
         {
             CardsInDeck.Add(card);
         }
         else
         {
             ReserveCards.Add(card);
-        }
+        }*/
+        ReserveCards.Add(card);
     }
 
     public void Heal(float healAmount)
