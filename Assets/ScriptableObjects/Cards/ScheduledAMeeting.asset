@@ -17,5 +17,5 @@ MonoBehaviour:
     meeting should be an email".
   Icon: {fileID: 0}
   cardActionType: 0
-  cardValue: 3
+  cardValue: 6
   Buffs: []

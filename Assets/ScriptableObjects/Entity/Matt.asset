@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
   m_Name: Matt
   m_EditorClassIdentifier: 
-  Name: 
-  StartingDialog: 
-  LossDialog: 
+  Name: Matt From Maintenance
+  StartingDialog: "Do you see all these requests? I can\u2019t move yours to the
+    top of the list."
+  LossDialog: "Okay, Okay. It\u2019ll be done in the next hour."
   EntitySprite: {fileID: -1909677367, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 0
   MaxHp: 0

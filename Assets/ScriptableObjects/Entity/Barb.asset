@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
   m_Name: Barb
   m_EditorClassIdentifier: 
-  Name: 
-  StartingDialog: 
-  LossDialog: 
+  Name: Balance Sheet Barb
+  StartingDialog: Your numbers don't add up!
+  LossDialog: Oh! It seems like one of my spreadsheet functions was deleted by accident.
   EntitySprite: {fileID: 1222552468, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 0
   MaxHp: 0

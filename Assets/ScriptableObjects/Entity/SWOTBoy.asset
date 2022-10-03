@@ -10,23 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
-  m_Name: SWOTBoys
+  m_Name: SWOTBoy
   m_EditorClassIdentifier: 
-  Name: 
+  Name: SWOT Boy
   StartingDialog: 
   LossDialog: 
-  BattleSprite: {fileID: 0}
-  MapSprite: {fileID: 0}
-  StartingHp: 0
-  MaxHp: 0
-  StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
-  StartingAttackBuff: 0
-  StartingDefenseBuff: 0
+  EntitySprite: {fileID: -956823954, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
+  StartingHp: 16
+  MaxHp: 16
+  StartingDefense: 3
+  StartingDamageValue: 4
+  StartingDefenseIncrementValue: 3
+  StartingAttackBuff: 3
+  StartingDefenseBuff: 3
   StartingAttackDebuff: 0
-  StartingDefenseDebuff: 0
-  movePattern: 
+  StartingDefenseDebuff: 3
+  movePattern: 0100000005000000000000000100000003000000
   minions: []
   RewardAmount: 0
   isRewardCard: 0

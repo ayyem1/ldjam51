@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
   m_Name: Henry
   m_EditorClassIdentifier: 
-  Name: 
-  StartingDialog: 
-  LossDialog: 
+  Name: High Strung Henry
+  StartingDialog: "I need this presentation completed right now! I don\u2019t care
+    if it is not presented for another 3 weeks."
+  LossDialog: "You\u2019re right, those priorities are more important. I\u2019ll
+    wait."
   EntitySprite: {fileID: 873007956, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 0
   MaxHp: 0

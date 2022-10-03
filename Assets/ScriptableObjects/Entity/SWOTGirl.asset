@@ -10,24 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
-  m_Name: Steve
+  m_Name: SWOTGirl
   m_EditorClassIdentifier: 
-  Name: Steve the Slacker
-  StartingDialog: "Yeah, Yeah. I\u2019ll get to it soon. Gotta check how many likes
-    my last post got."
-  LossDialog: "Sorry, you\u2019ll have it in your email as soon as you get back to
-    your desk."
-  EntitySprite: {fileID: 703200692, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 0
-  MaxHp: 0
+  Name: SWOT Girl
+  StartingDialog: 
+  LossDialog: 
+  EntitySprite: {fileID: 506620599, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
+  StartingHp: 16
+  MaxHp: 16
   StartingDefense: 0
-  StartingDamageValue: 0
-  StartingDefenseIncrementValue: 0
+  StartingDamageValue: 3
+  StartingDefenseIncrementValue: 3
   StartingAttackBuff: 0
   StartingDefenseBuff: 0
   StartingAttackDebuff: 0
-  StartingDefenseDebuff: 0
-  movePattern: 
+  StartingDefenseDebuff: 3
+  movePattern: 0100000000000000030000000100000000000000
   minions: []
   RewardAmount: 0
   isRewardCard: 0

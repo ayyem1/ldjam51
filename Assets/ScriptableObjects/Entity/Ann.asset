@@ -13,20 +13,22 @@ MonoBehaviour:
   m_Name: Ann
   m_EditorClassIdentifier: 
   Name: Ann From Accounting
-  StartingDialog: 
+  StartingDialog: Have you submitted your Invoices?
   LossDialog: Tch. These look like the correct invoices, I must have misplaced them.
   EntitySprite: {fileID: -546294896, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
-  StartingHp: 3
+  StartingHp: 16
   MaxHp: 16
   StartingDefense: 0
   StartingDamageValue: 3
   StartingDefenseIncrementValue: 3
-  StartingAttackBuff: 0
-  StartingDefenseBuff: 0
-  StartingAttackDebuff: 0
-  StartingDefenseDebuff: 0
+  StartingAttackBuff: 4
+  StartingDefenseBuff: 3
+  StartingAttackDebuff: 3
+  StartingDefenseDebuff: 4
   movePattern: 000000000200000003000000010000000400000005000000
-  minions: []
+  minions:
+  - {fileID: 11400000, guid: 2367b368c1a63cf49b0c406f67298be2, type: 2}
+  - {fileID: 11400000, guid: b4a9ed1cc0582374f96974e9a7d63588, type: 2}
   RewardAmount: 22
   isRewardCard: 1
   RewardCard: {fileID: 0}

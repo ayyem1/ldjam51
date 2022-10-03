@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
   m_Name: Hariett
   m_EditorClassIdentifier: 
-  Name: 
-  StartingDialog: 
-  LossDialog: 
+  Name: HR Harriet
+  StartingDialog: I need to investigate a complaint.
+  LossDialog: Clearly, the other party was at fault. Thank you for your time.
   EntitySprite: {fileID: 919324293, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 0
   MaxHp: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a00a881715fcef40ad405288e170aaf, type: 3}
   m_Name: Ivan
   m_EditorClassIdentifier: 
-  Name: 
-  StartingDialog: 
-  LossDialog: 
+  Name: Ivan from IT
+  StartingDialog: "I don\u2019t have time to look over that software approval request."
+  LossDialog: My manager informed me that I have to make this my top priority.
   EntitySprite: {fileID: -518557361, guid: 6d12648eafd345349b9c248238176ef9, type: 3}
   StartingHp: 0
   MaxHp: 0

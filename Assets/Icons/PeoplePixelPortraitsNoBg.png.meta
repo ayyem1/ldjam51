@@ -347,6 +347,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SWOTGirl
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 694
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3ebb4cf4ee34a448ad2fc04a990d8c
+      internalID: 506620599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SWOTBoy
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 976
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.4794582, y: 0.46918702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c384a63e227a224eadd45a4d76e3b7d
+      internalID: -956823954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -361,6 +403,8 @@ TextureImporter:
       Charles: -1561237945
       Steve: 703200692
       Ivan: -518557361
+      SWOTGirl: 506620599
+      SWOTBoy: -956823954
       Barb: 1222552468
       Ken: 1567618723
       Paul: -857628918
