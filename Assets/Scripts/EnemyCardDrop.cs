@@ -77,6 +77,7 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
 
         if(GameManager.Instance.Enemies.Count == 0)
         {
+            GameInstance.Instance.MainPlayer.ResetMana();
             GameManager.Instance.RewardScreen();
         }
         else if(GameInstance.Instance.MainPlayer.GetMana() == 0)
