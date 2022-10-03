@@ -2119,7 +2119,7 @@ MonoBehaviour:
   timer: {fileID: 1480030482}
   draggedCardUI: {fileID: 507728549}
   popUpTransform: {fileID: 423814370}
-  spriteArray:
+  actionTypeSpriteArray:
   - {fileID: -816279357, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
   - {fileID: -1623977274, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}
   - {fileID: -11263988, guid: b0bc17acd1e2ef34db6817356b1024f9, type: 3}

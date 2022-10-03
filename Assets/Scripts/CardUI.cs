@@ -13,6 +13,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] private TMP_Text Title;
     [SerializeField] private Image Icon;
     [SerializeField] private TMP_Text Description;
+    [SerializeField] private Image ActionTypeIcon;
 
     public Image Background;
     public Image Border;
@@ -20,6 +21,8 @@ public class CardUI : MonoBehaviour
     public Card Data { get; set; }
     public CardType TypeOfCard { get; set; }
 
+    [SerializeField] private Sprite[] actionTypeSpriteArray;
+    private Sprite sprite;
     public bool IsEmpty => Data == null;
 
     public void Initialize(Card data, CardType cardType)
@@ -31,6 +34,31 @@ public class CardUI : MonoBehaviour
         Icon.gameObject.SetActive(!IsEmpty);
         Description.gameObject.SetActive(!IsEmpty);
 
+        switch(Data.cardActionType)
+        {
+            case Card.ActionType.Attack:
+                sprite = actionTypeSpriteArray[0];
+                break;
+            case Card.ActionType.Defense:
+                sprite = actionTypeSpriteArray[1];
+                break;
+            case Card.ActionType.BuffAttack:
+                sprite = actionTypeSpriteArray[2];
+                break;
+            case Card.ActionType.BuffDefense:
+                sprite = actionTypeSpriteArray[3];
+                break;
+            case Card.ActionType.DebuffAttack:
+                sprite = actionTypeSpriteArray[4];
+                break;
+            case Card.ActionType.DebuffDefense:
+                sprite = actionTypeSpriteArray[5];
+                break;
+            default:
+                Debug.LogError("Wrong Action Type");
+                break;
+        }
+
         if (!IsEmpty)
         {
             Title.text = data.Title;
@@ -41,7 +69,8 @@ public class CardUI : MonoBehaviour
             }
             else
             {
-                Description.text = Data.cardActionType.ToString() + ": " + Data.cardValue;
+                Description.text = Data.cardValue.ToString();
+                ActionTypeIcon.sprite = sprite;
             }
         }
     }

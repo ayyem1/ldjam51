@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Timer timer;
     [SerializeField] private CardUI draggedCardUI;
     [SerializeField] private Transform popUpTransform;
-    [SerializeField] private Sprite[] spriteArray;
+    [SerializeField] private Sprite[] actionTypeSpriteArray;
     [SerializeField] private BattleDialog dialogBox;
     private Sprite sprite;
 
@@ -40,22 +40,22 @@ public class GameManager : Singleton<GameManager>
         switch(actionType)
         {
             case Card.ActionType.Attack:
-                sprite = spriteArray[0];
+                sprite = actionTypeSpriteArray[0];
                 break;
             case Card.ActionType.Defense:
-                sprite = spriteArray[1];
+                sprite = actionTypeSpriteArray[1];
                 break;
             case Card.ActionType.BuffAttack:
-                sprite = spriteArray[2];
+                sprite = actionTypeSpriteArray[2];
                 break;
             case Card.ActionType.BuffDefense:
-                sprite = spriteArray[3];
+                sprite = actionTypeSpriteArray[3];
                 break;
             case Card.ActionType.DebuffAttack:
-                sprite = spriteArray[4];
+                sprite = actionTypeSpriteArray[4];
                 break;
             case Card.ActionType.DebuffDefense:
-                sprite = spriteArray[5];
+                sprite = actionTypeSpriteArray[5];
                 break;
             default:
                 Debug.LogError("Wrong Action Type");
