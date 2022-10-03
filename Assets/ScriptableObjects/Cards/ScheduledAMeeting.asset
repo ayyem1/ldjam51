@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: ScheduledAMeeting
   m_EditorClassIdentifier: 
   Title: Scheduled A Meeting
-  Description: No Idea What To Do? Schedule a Meeting. No one has ever said "This
-    meeting should be an email".
+  Description: ' No one has ever said "This meeting should be an email".'
   Icon: {fileID: 1261907390, guid: fd1efba332984854d927b11a4429cd19, type: 3}
   cardActionType: 0
   cardValue: 6

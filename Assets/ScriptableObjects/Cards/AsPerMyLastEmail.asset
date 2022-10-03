@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AsPerMyLastEmail
   m_EditorClassIdentifier: 
   Title: As Per my Last Email
-  Description: As Per my Last Email
+  Description: Do you even read them?
   Icon: {fileID: -810271122, guid: fd1efba332984854d927b11a4429cd19, type: 3}
   cardActionType: 1
   cardValue: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NewComp
   m_EditorClassIdentifier: 
   Title: New Computer
-  Description: Finally All Your Software Loads At Normal Speeds Again
+  Description: Finally! All Your Software Loads At Normal Speeds Again
   Icon: {fileID: -91420944, guid: fd1efba332984854d927b11a4429cd19, type: 3}
   cardActionType: 2
   cardValue: 7
