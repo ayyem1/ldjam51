@@ -13,23 +13,24 @@ public class BattleDialog : MonoBehaviour
 
     public void InitializeReward(Entity entity, bool isReward)
     {
-            Title.text = "You Won!";
-            Description.text = entity.LossDialog + "\n\nRewards:\nUnlocked A New Card!\nEarned " + entity.RewardAmount + " Corporate Bucks";
-            Icon.sprite = entity.BattleSprite;
-            ButtonText.text = "Collect";
-            GameInstance.Instance.MainPlayer.CurrentCorporateBucksAmount += entity.RewardAmount;
-            gameObject.SetActive(true);
-            this.isReward = isReward;        
+        Title.text = "You Won!";
+        Description.text = entity.LossDialog + "\n\nRewards:\nUnlocked A New Card!\nEarned " + entity.RewardAmount + " Corporate Bucks";
+        Icon.sprite = entity.BattleSprite;
+        ButtonText.text = "Collect";
+        GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(entity.RewardAmount);
+        GameInstance.Instance.MainPlayer.AddCard(entity.RewardCard);
+        gameObject.SetActive(true);
+        this.isReward = isReward;        
     }
 
     public void InitializeGameOver()
     {
-            Title.text = "You've Been Laid Off!";
-            Description.text = "Not Everyone Can Hack It Here.";
-            //Icon.sprite = entity.BattleSprite;
-            ButtonText.text = "Click Here To Try Again";
-            gameObject.SetActive(true);
-            this.isReward = false;        
+        Title.text = "You've Been Laid Off!";
+        Description.text = "Not Everyone Can Hack It Here.";
+        //Icon.sprite = entity.BattleSprite;
+        ButtonText.text = "Click Here To Try Again";
+        gameObject.SetActive(true);
+        this.isReward = false;        
     }
 
     public void OnButtonPress()
