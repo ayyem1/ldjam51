@@ -46,7 +46,6 @@ public class GameInstance : Singleton<GameInstance>
             return StatesPerInteraction[interactionName];
         }
 
-        Debug.LogError("Didn't find state.");
         return Interactible.State.NotUnlocked;
     }
 
