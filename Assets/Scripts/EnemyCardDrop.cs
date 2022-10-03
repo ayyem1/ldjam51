@@ -72,6 +72,7 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
         if(enemyUI.GetEnemy().CurrentHp <= 0)
         {
             GameManager.Instance.Enemies.Remove(enemyUI.GetEnemy());
+            Destroy(enemyUI.gameObject);
         }
 
         if(GameManager.Instance.Enemies.Count == 0)
