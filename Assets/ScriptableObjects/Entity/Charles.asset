@@ -29,8 +29,6 @@ MonoBehaviour:
   minions: []
   RewardAmount: 0
   isRewardCard: 0
+  IsEndOfContent: 1
   RewardCard: {fileID: 0}
-  unlockedEntities: []
-  unlockedTreasures: []
-  unlockedHealingItems: []
   UnlockedInteractions: []
