@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 {
     public UnityEvent OnTimerStop;
     [SerializeField] private TextMeshProUGUI timerText;
-    private float sceneTimer = 10.0f;
+    private float sceneTimer = 11.0f;
     private bool isTimerActive = false;
 
     private void Update()
@@ -17,10 +17,14 @@ public class Timer : MonoBehaviour
 
         if (sceneTimer > 0)
         {
-            timerText.text = sceneTimer.ToString("0.00");
-            if (sceneTimer < 3)
+            // Adds a 1 second delay
+            if(sceneTimer <= 10)
             {
-                timerText.color = Color.red;
+                timerText.text = sceneTimer.ToString("0.00");
+                if (sceneTimer < 3)
+                {
+                    timerText.color = Color.red;
+                }
             }
         }
         else
@@ -35,7 +39,7 @@ public class Timer : MonoBehaviour
     public void SetTimer()
     {
         isTimerActive = true;
-        sceneTimer = 10.0f;
+        sceneTimer = 11.0f;
         timerText.color = Color.white;
     }
     public void StopTimer()
