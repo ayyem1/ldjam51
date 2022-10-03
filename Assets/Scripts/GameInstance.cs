@@ -7,7 +7,7 @@ public class GameInstance : Singleton<GameInstance>
     protected GameInstance () { }
 
     public Player MainPlayer;
-
+    public FtueManager Ftue;
     public Entity SelectedEntity { get; set; }
 
     public ScriptableObject[] UnlockedInteractionsAtStart;
@@ -18,12 +18,12 @@ public class GameInstance : Singleton<GameInstance>
     public void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        Ftue.Reset();
         Reset();
     }
 
     public void Reset()
     {
-        // Add Ann to UnlockedInteractions.
         MainPlayer.InitializePlayer();
         StatesPerInteraction.Clear();
         foreach (var interaction in UnlockedInteractionsAtStart)
