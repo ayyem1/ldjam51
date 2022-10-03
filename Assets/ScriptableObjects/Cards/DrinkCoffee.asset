@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: Drink Coffee
   Description: Power up with some Coffee
-  Icon: {fileID: 0}
+  Icon: {fileID: -1585900398, guid: fd1efba332984854d927b11a4429cd19, type: 3}
   cardActionType: 2
   cardValue: 4
   Buffs:

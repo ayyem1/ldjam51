@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a6111a140d47bd489af0eec0c1fcee2, type: 3}
-  m_Name: ScheduledAMeeting
+  m_Name: Complain
   m_EditorClassIdentifier: 
-  Title: Scheduled A Meeting
-  Description: No Idea What To Do? Schedule a Meeting. No one has ever said "This
-    meeting should be an email".
-  Icon: {fileID: 1261907390, guid: fd1efba332984854d927b11a4429cd19, type: 3}
+  Title: 
+  Description: 
+  Icon: {fileID: -1751170315, guid: fd1efba332984854d927b11a4429cd19, type: 3}
   cardActionType: 0
-  cardValue: 6
+  cardValue: 0
   Buffs: []

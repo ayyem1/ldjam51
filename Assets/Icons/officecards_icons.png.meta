@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: fd1efba332984854d927b11a4429cd19
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: newComp_icon
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 561
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf260305d67d8a34c85afe5ee9d38b60
+      internalID: -91420944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: confirmWriting_icon
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 503
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf945518759527a4b8149426f21a7af0
+      internalID: 1506353736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: complain_icon
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 445
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651194650c4ddb74c873eaa37f8c2ab7
+      internalID: -1751170315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: customerRequest_icon
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 445
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4570325f0bd9404c8072a229767422a
+      internalID: -724756699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: makeToDo_icon
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 388
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d412e13940aa24d811b1b6558d64f0
+      internalID: 93768810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: email_icon
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 390
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2adc7da7c59bf74e92af03466995e1e
+      internalID: -810271122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spellCheck_icon
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 446
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47909e67468ec9d468dfee9a5df6623f
+      internalID: 2127308699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: createDoc_icon
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 386
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6712055e51c65ed4c81967b0935b6f83
+      internalID: -1722698946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scheduleMeeting_icon
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 387
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f03f178f23f59469a49a32ad143983
+      internalID: 1261907390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffee_icon
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 330
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155a29eda2dd4bb4d8c91c0dc16a6fec
+      internalID: -1585900398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skipLunch_icon
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 329
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba9e8f3a6399684cb2ea29addb4801d
+      internalID: -92664910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mediaBreak_icon
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 329
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c1c64a6088be64c95a4ba189ca6e04
+      internalID: -1752876794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lockWorkStation_icon
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 212
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8293d911b8f9f2b48939be90a2ec9bfd
+      internalID: 994791961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deadlineMet_icon
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 154
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b65db23fba0f946b78e0c0af81d5e7
+      internalID: -2008733651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: virus_icon
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 154
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b334adc119591ac41b8ecbe16f2de6c6
+      internalID: -1853852659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spreadsheet_icon
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 37
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a004abcf8051894c86da814435ba64e
+      internalID: -139955610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: officecards_icons_91
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 37
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31a3ba35dbfe4d4e9da33881042f495
+      internalID: 784329307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: createPres_ico
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 39
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8444d3e1abd78d746a733939d9ea6556
+      internalID: 250625345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: createSpreadsheet_icon_2
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 38
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a77a32ae192874485034ab968be862
+      internalID: 595164445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: riskTaker_icon
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 38
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2324d9ab4da85d84eb16ce66490a89e8
+      internalID: 1353226636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: managerSign_icon
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 37
+        width: 50
+        height: 50
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b3bfec81b6a984d85116fa92c914d8
+      internalID: 169207073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      officecards_icons_72: 1596677326
+      createSpreadsheet_icon_2: 595164445
+      makeToDo_icon: 93768810
+      officecards_icons_62: -1946378536
+      officecards_icons_83: 1946885781
+      officecards_icons_69: 981283839
+      officecards_icons_37: 254021067
+      officecards_icons_98: -2105115013
+      officecards_icons_57: -1874462872
+      officecards_icons_66: 467606468
+      officecards_icons_85: -1285148800
+      officecards_icons_43: 1322746935
+      scheduleMeeting_icon: 1261907390
+      officecards_icons_28: -167922093
+      officecards_icons_77: 699021460
+      officecards_icons_56: 1421929164
+      customerRequest_icon: -724756699
+      officecards_icons_25: 1372243210
+      officecards_icons_39: 261085712
+      officecards_icons_96: -1198630152
+      officecards_icons_45: 1507020154
+      officecards_icons_94: -179237802
+      officecards_icons_7: 1402015829
+      officecards_icons_76: 478176190
+      coffee_icon: -1585900398
+      officecards_icons_65: 689302082
+      officecards_icons_60: 138442770
+      officecards_icons_54: -652429653
+      officecards_icons_82: -1392384745
+      skipLunch_icon: -92664910
+      officecards_icons_81: 251315745
+      deadlineMet_icon: -2008733651
+      officecards_icons_58: -1536986069
+      officecards_icons_18: 1505334287
+      officecards_icons_1: 2115838921
+      lockWorkStation_icon: 994791961
+      officecards_icons_13: 575301067
+      mediaBreak_icon: -1752876794
+      riskTaker_icon: 1353226636
+      officecards_icons_86: -1976118155
+      officecards_icons_15: -21667619
+      officecards_icons_4: 1384030911
+      officecards_icons_88: 1134600457
+      officecards_icons_59: -23898553
+      officecards_icons_47: -10353131
+      complain_icon: -1751170315
+      officecards_icons_35: -1134121229
+      officecards_icons_70: 915730572
+      officecards_icons_14: -648727677
+      officecards_icons_33: -1587280740
+      officecards_icons_74: 872388986
+      createPres_ico: 250625345
+      lockingWorkstation_icon: -301435656
+      officecards_icons_23: -343961444
+      officecards_icons_17: -459927273
+      officecards_icons_51: 1481707929
+      officecards_icons_61: -97582777
+      officecards_icons_8: 1296151037
+      officecards_icons_44: 1208699785
+      officecards_icons_89: 599332085
+      email_icon: -810271122
+      officecards_icons_67: 350536362
+      officecards_icons_32: 761862599
+      officecards_icons_3: -1177266226
+      officecards_icons_6: 307396402
+      officecards_icons_22: -491774796
+      createDoc_icon: -1722698946
+      officecards_icons_80: -1300140100
+      officecards_icons_49: 1739953260
+      officecards_icons_42: 2021410161
+      officecards_icons_55: -1403326533
+      officecards_icons_91: 784329307
+      officecards_icons_52: 293392710
+      officecards_icons_26: -1055196650
+      officecards_icons_10: 414906988
+      officecards_icons_50: -2101464923
+      newComp_icon: -91420944
+      officecards_icons_73: 2766321
+      officecards_icons_5: -2069508686
+      officecards_icons_68: 2015929943
+      officecards_icons_11: -1058108665
+      officecards_icons_97: -112915232
+      officecards_icons_99: 652294300
+      officecards_icons_16: 2022894966
+      spellCheck_icon: 2127308699
+      officecards_icons_31: -623267800
+      officecards_icons_64: 1318976352
+      officecards_icons_9: 814789568
+      officecards_icons_46: 1704679689
+      officecards_icons_27: 606324993
+      confirmWriting_icon: 1506353736
+      officecards_icons_53: -808437077
+      virus_icon: -1853852659
+      officecards_icons_19: -1420776877
+      officecards_icons_29: -958117294
+      spreadsheet_icon: -139955610
+      managerSign_icon: 169207073
+      officecards_icons_79: 1370900134
+      officecards_icons_87: 1905733777
+      officecards_icons_78: -1794753338
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

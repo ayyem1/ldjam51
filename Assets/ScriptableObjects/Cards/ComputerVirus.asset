@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: ComputerVirus
   Description: Call IT! Nothing is working!
-  Icon: {fileID: 0}
+  Icon: {fileID: -1853852659, guid: fd1efba332984854d927b11a4429cd19, type: 3}
   cardActionType: 4
   cardValue: 2
   Buffs: []
