@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Sprite[] actionTypeSpriteArray;
     [SerializeField] private BattleDialog dialogBox;
     private Sprite sprite;
+    private Vector3 position;
 
     public DeckController DeckController;
 
@@ -35,7 +36,7 @@ public class GameManager : Singleton<GameManager>
         timer.SetTimer();
     }
 
-    public PopUpAction CreatePopUp(float valueAmount, Card.ActionType actionType)
+    public PopUpAction CreatePopUp(Transform transform, float valueAmount, Card.ActionType actionType, bool isEnemy)
     {
         switch(actionType)
         {
@@ -61,9 +62,18 @@ public class GameManager : Singleton<GameManager>
                 Debug.LogError("Wrong Action Type");
                 break;
         }
+
+        if (isEnemy)
+        {
+            position = transform.position;
+        }
+        else
+        {
+            position = new Vector3(0, 0, 0);
+        }
         
         PopUpAction popUpAction = popUpTransform.GetComponent<PopUpAction>();
-        popUpAction.Setup(valueAmount, sprite);
+        popUpAction.Setup(position, valueAmount, sprite);
         return popUpAction;
     }
 
@@ -77,5 +87,10 @@ public class GameManager : Singleton<GameManager>
     {
         timer.StopTimer();
         dialogBox.InitializeGameOver();
+    }
+
+    public EnemyUISpawner GetEnemyUISpawner()
+    {
+        return enemyUISpawner;
     }
 }

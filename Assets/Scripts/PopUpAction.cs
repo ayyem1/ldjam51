@@ -9,11 +9,12 @@ public class PopUpAction : MonoBehaviour
     private float disappearTimer;
     private Color textColor;
 
-    public void Setup(float amount, Sprite icon)
+    public void Setup(Vector3 position, float amount, Sprite icon)
     {
         textMesh.SetText(amount.ToString());
         uiImage.sprite = icon;
         disappearTimer = 1f;
+        gameObject.transform.SetPositionAndRotation(position, Quaternion.identity);
         gameObject.SetActive(true);
     }
 

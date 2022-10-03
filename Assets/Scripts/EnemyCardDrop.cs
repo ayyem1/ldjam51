@@ -40,27 +40,27 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
         {
             case Card.ActionType.Attack:
                 enemyUI.GetEnemy().Damage(cardToPlay.cardValue + mainPlayer.BuffDamageAmount);
-                GameManager.Instance.CreatePopUp(cardToPlay.cardValue + mainPlayer.BuffDamageAmount, actionName);
+                GameManager.Instance.CreatePopUp(enemyUI.transform, cardToPlay.cardValue + mainPlayer.BuffDamageAmount, actionName, true);
                 break;
             case Card.ActionType.Defense:
                 mainPlayer.ModifyDefense(cardToPlay.cardValue + mainPlayer.BuffDefenseAmount);
-                GameManager.Instance.CreatePopUp(cardToPlay.cardValue + mainPlayer.BuffDefenseAmount, actionName);
+                GameManager.Instance.CreatePopUp(mainPlayer.transform, cardToPlay.cardValue + mainPlayer.BuffDefenseAmount, actionName, false);
                 break;
             case Card.ActionType.BuffAttack:
                 mainPlayer.BuffDamage(cardToPlay.cardValue);
-                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                GameManager.Instance.CreatePopUp(mainPlayer.transform, cardToPlay.cardValue, actionName, false);
                 break;
             case Card.ActionType.BuffDefense:
                 mainPlayer.BuffDefense(cardToPlay.cardValue);
-                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                GameManager.Instance.CreatePopUp(mainPlayer.transform, cardToPlay.cardValue, actionName, false);
                 break;
             case Card.ActionType.DebuffAttack:
                 enemyUI.GetEnemy().BuffDamage(-cardToPlay.cardValue);
-                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                GameManager.Instance.CreatePopUp(enemyUI.transform, cardToPlay.cardValue, actionName, true);
                 break;
             case Card.ActionType.DebuffDefense:
                 enemyUI.GetEnemy().BuffDefense(-cardToPlay.cardValue);
-                GameManager.Instance.CreatePopUp(cardToPlay.cardValue, actionName);
+                GameManager.Instance.CreatePopUp(enemyUI.transform, cardToPlay.cardValue, actionName, true);
                 break;
             default:
                 Debug.LogError("Wrong Action Type");
