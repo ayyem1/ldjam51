@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Coworker's Tea
   Description: They were kind enough to share with you!
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 29393177d56fff14ea216b12cabab101, type: 3}
   HealingAmount: 20
   HealingPrice: 0
   IsSingleUse: 1

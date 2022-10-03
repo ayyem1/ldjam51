@@ -33,8 +33,9 @@ public class CardUI : MonoBehaviour
         Title.gameObject.SetActive(!IsEmpty);
         Icon.gameObject.SetActive(!IsEmpty);
         Description.gameObject.SetActive(!IsEmpty);
+        ActionTypeIcon.gameObject.SetActive(!IsEmpty);
 
-        switch(Data.cardActionType)
+        switch (Data.cardActionType)
         {
             case Card.ActionType.Attack:
                 sprite = actionTypeSpriteArray[0];
@@ -81,5 +82,6 @@ public class CardUI : MonoBehaviour
         Title.gameObject.SetActive(false);
         Icon.gameObject.SetActive(false);
         Description.gameObject.SetActive(false);
+        ActionTypeIcon.gameObject.SetActive(false);
     }
 }

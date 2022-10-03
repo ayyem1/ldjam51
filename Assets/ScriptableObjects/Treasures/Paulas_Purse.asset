@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Paula's Purse
   Description: Maybe it will have a candy
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 7b58d6aeb5b2173489c681789c3cf198, type: 3}
   GrantedCorporateBucks: 10
   GrantedCards:
   - {fileID: 11400000, guid: a9dc44a96e72adb47a7ca69b9663037e, type: 2}
