@@ -29,8 +29,8 @@ MonoBehaviour:
   minions:
   - {fileID: 11400000, guid: e4949ba75af149840bc9f44fe866c98b, type: 2}
   - {fileID: 11400000, guid: 1085435c713ab5141a1c24507ca3aab5, type: 2}
-  RewardAmount: 50
-  isRewardCard: 0
+  RewardAmount: 6
+  isRewardCard: 1
   IsEndOfContent: 0
   RewardCard: {fileID: 11400000, guid: f7e9067f3d2d42b41b47bb53b241dff0, type: 2}
   UnlockedInteractions:

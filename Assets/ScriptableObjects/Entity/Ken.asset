@@ -29,7 +29,7 @@ MonoBehaviour:
   movePattern: 0100000000000000000000000100000000000000
   minions:
   - {fileID: 11400000, guid: f68b704acfee3d04ea2236389a6661f4, type: 2}
-  RewardAmount: 40
+  RewardAmount: 6
   isRewardCard: 0
   IsEndOfContent: 0
   RewardCard: {fileID: 11400000, guid: 5c6fbe755c3f8d843b43dccdfe6a0c19, type: 2}

@@ -27,12 +27,9 @@ MonoBehaviour:
   StartingDefenseDebuff: 0
   movePattern: 0100000000000000010000000100000000000000
   minions: []
-  RewardAmount: 50
+  RewardAmount: 15
   isRewardCard: 1
+  IsEndOfContent: 0
   RewardCard: {fileID: 11400000, guid: d331728edd7e7e64c8c2ad98b5e1ce22, type: 2}
-  unlockedEntities:
-  - {fileID: 11400000, guid: 27a505d750b372e4f9f7e019d31c27bf, type: 2}
-  unlockedTreasures: []
-  unlockedHealingItems: []
   UnlockedInteractions:
   - {fileID: 11400000, guid: 27a505d750b372e4f9f7e019d31c27bf, type: 2}

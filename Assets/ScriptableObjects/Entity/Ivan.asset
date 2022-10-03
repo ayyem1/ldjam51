@@ -29,12 +29,9 @@ MonoBehaviour:
   minions:
   - {fileID: 11400000, guid: ed15fab170c7ba747b8e21240bda5750, type: 2}
   - {fileID: 11400000, guid: 7f84ded21a8441d41a09966a17f01e36, type: 2}
-  RewardAmount: 30
+  RewardAmount: 8
   isRewardCard: 0
+  IsEndOfContent: 0
   RewardCard: {fileID: 11400000, guid: 49c595377619afa44b7356a81e94a1f9, type: 2}
-  unlockedEntities:
-  - {fileID: 11400000, guid: ad8a9b736e37d5e40bfca9486ca28463, type: 2}
-  unlockedTreasures: []
-  unlockedHealingItems: []
   UnlockedInteractions:
   - {fileID: 11400000, guid: ad8a9b736e37d5e40bfca9486ca28463, type: 2}
