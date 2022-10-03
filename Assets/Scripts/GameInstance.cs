@@ -70,21 +70,21 @@ public class GameInstance : Singleton<GameInstance>
         //}
     }
 
-    public void SetInteractionToStarted(string interactionName)
-    {
-        if (StatesPerInteraction.ContainsKey(interactionName) && StatesPerInteraction[interactionName] == Interactible.State.Unlocked)
-        {
-            StatesPerInteraction[interactionName] = Interactible.State.Started;
-        }
-        //else
-        //{
-        //    Debug.Log("Failed to start interaction.");
-        //}
-    }
+    //public void SetInteractionToStarted(string interactionName)
+    //{
+    //    if (StatesPerInteraction.ContainsKey(interactionName) && StatesPerInteraction[interactionName] == Interactible.State.Unlocked)
+    //    {
+    //        StatesPerInteraction[interactionName] = Interactible.State.Started;
+    //    }
+    //    //else
+    //    //{
+    //    //    Debug.Log("Failed to start interaction.");
+    //    //}
+    //}
 
     public void SetInteractionToCompleted(string interactionName)
     {
-        if (StatesPerInteraction.ContainsKey(interactionName) && StatesPerInteraction[interactionName] == Interactible.State.Started)
+        if (StatesPerInteraction.ContainsKey(interactionName) && StatesPerInteraction[interactionName] == Interactible.State.Unlocked)
         {
             StatesPerInteraction[interactionName] = Interactible.State.Completed;
         }

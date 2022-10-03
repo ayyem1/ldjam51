@@ -13,11 +13,12 @@ public class InteractionDialog : MonoBehaviour
     private Interactible refInteractble;
     public void Initialize(Interactible interactible)
     {
-        GameInstance.Instance.SetInteractionToStarted(interactible.referenceInteraction.name);
+        //GameInstance.Instance.SetInteractionToStarted(interactible.referenceInteraction.name);
         refInteractble = interactible;
         if (interactible.TypeOfInteractible == Interactible.InteractibleType.HealingItem)
         {
             HealingItem healingItem = (HealingItem)interactible.referenceInteraction;
+            UpdateUnlockedInteractions(); // Healing items unlock next item as soon as you click on them. You don't have to heal.
             Title.text = healingItem.Name;
 
             if (healingItem.HealingPrice > 0)
@@ -57,6 +58,7 @@ public class InteractionDialog : MonoBehaviour
         }
         else if (interactible.TypeOfInteractible == Interactible.InteractibleType.Treasure)
         {
+            UpdateUnlockedInteractions();// Treasure items unlock next item as soon as you click on them. You don't have to collect.
             Treasure treasureItem = (Treasure)interactible.referenceInteraction;
 
             Title.text = treasureItem.Name;
@@ -96,7 +98,7 @@ public class InteractionDialog : MonoBehaviour
                 GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(-healingItem.HealingPrice);
                 GameInstance.Instance.MainPlayer.Heal(healingItem.HealingAmount);
                 GameInstance.Instance.SetInteractionToCompleted(healingItem.name);
-                UpdateUnlockedInteractions();
+                //UpdateUnlockedInteractions();
                 gameObject.SetActive(false);
             }
         }
@@ -112,7 +114,7 @@ public class InteractionDialog : MonoBehaviour
                 }
             }
             GameInstance.Instance.SetInteractionToCompleted(treasureItem.name);
-            UpdateUnlockedInteractions();
+            //UpdateUnlockedInteractions();
             gameObject.SetActive(false);
         }
 

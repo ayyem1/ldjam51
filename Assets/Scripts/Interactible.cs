@@ -18,7 +18,7 @@ public class Interactible : MonoBehaviour
     {
         NotUnlocked,
         Unlocked,
-        Started,
+        //Started,
         Completed
     }
 

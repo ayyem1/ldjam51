@@ -28,9 +28,9 @@ public class BattleDialog : MonoBehaviour
         Title.text = "You've Been Laid Off!";
         Description.text = "Not Everyone Can Hack It Here.";
         //Icon.sprite = entity.BattleSprite;
-        ButtonText.text = "Click Here To Try Again";
+        ButtonText.text = "Reapply";
         gameObject.SetActive(true);
-        this.isReward = false;        
+        this.isReward = false;
     }
 
     public void OnButtonPress()

@@ -79,8 +79,7 @@ public class EnemyCardDrop : MonoBehaviour, IDropHandler
         {
             GameManager.Instance.RewardScreen();
         }
-
-        if(GameInstance.Instance.MainPlayer.GetMana() == 0)
+        else if(GameInstance.Instance.MainPlayer.GetMana() == 0)
         {
             TurnSystem.Instance.NextTurn();
         }
