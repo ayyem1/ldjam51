@@ -12,5 +12,6 @@ public class HealingItem : ScriptableObject
     public Entity[] unlockedEntities;
     public Treasure[] unlockedTreasures;
     public HealingItem[] unlockedHealingItems;
-    public bool IsUnlocked { get; set; }
+    public ScriptableObject[] UnlockedInteractions;
+
 }

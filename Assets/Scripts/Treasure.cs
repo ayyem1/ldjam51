@@ -12,4 +12,6 @@ public class Treasure : ScriptableObject
     public Entity[] unlockedEntities;
     public Treasure[] unlockedTreasures;
     public HealingItem[] unlockedHealingItems;
+    public ScriptableObject[] UnlockedInteractions;
+
 }

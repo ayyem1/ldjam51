@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Enemy
 {
     public Entity Data { get; private set; }

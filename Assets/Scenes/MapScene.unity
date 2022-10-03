@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 5999c2cd77abe3b4f922143628684ec8, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Harriet From HR
@@ -156,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -260,6 +264,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 27a505d750b372e4f9f7e019d31c27bf, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Ceo Charles
@@ -274,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -382,6 +390,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a445d56e27b2584d86e24cef1edf681, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Treasure_Carryon
@@ -396,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -481,17 +493,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
   m_PrefabInstance: {fileID: 106383448}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &106383450 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
-  m_PrefabInstance: {fileID: 106383448}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd59cef910926c343a37a9a6eb967e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &117628389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -511,6 +512,10 @@ PrefabInstance:
       propertyPath: interactionDialog
       value: 
       objectReference: {fileID: 514361144}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: a68833fa9b5e1ef4a9895edd9d3ea928, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: PaidHeal_CoffeePot
@@ -525,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -610,17 +615,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
   m_PrefabInstance: {fileID: 117628389}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &117628391 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
-  m_PrefabInstance: {fileID: 117628389}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd59cef910926c343a37a9a6eb967e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &191798075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,6 +4447,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 62fa3d53aa3f7a5459b380f5e019a801, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Treasure_Purse
@@ -4467,7 +4465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4552,17 +4550,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
   m_PrefabInstance: {fileID: 548707755}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &548707757 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
-  m_PrefabInstance: {fileID: 548707755}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd59cef910926c343a37a9a6eb967e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &560622084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,6 +5711,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bcfcc2577cd57144b44b998215f917d, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Balance Sheet Barb
@@ -5738,7 +5729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5842,6 +5833,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d7b0456c2e6e34438822770798e5c1b, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: High Strung Henry
@@ -5856,7 +5851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6058,6 +6053,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: c031e534e0ba672459f6951e5749e4a2, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Ann The Accountant
@@ -6072,7 +6071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6850,6 +6849,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e3dd791f4c9eb14e95eacfdadfe56b6, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Steve The Slacker
@@ -6864,7 +6867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7306,13 +7309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b993c278020ed4b824d5ced1104b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactibles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 548707757}
-  - {fileID: 117628391}
-  - {fileID: 106383450}
-  - {fileID: 2116389259}
 --- !u!1 &1142703248
 GameObject:
   m_ObjectHideFlags: 0
@@ -7465,6 +7461,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 97c8be3f3d7bf3148b23e228b9eb0ae6, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: KPI Ken
@@ -7479,7 +7479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7953,6 +7953,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 4cdaa2248cc73764382066c8054d49eb, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Ivan From IT
@@ -7967,7 +7971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8071,6 +8075,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: ad8a9b736e37d5e40bfca9486ca28463, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Matt From Maintenance
@@ -8085,7 +8093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9563,6 +9571,10 @@ PrefabInstance:
       propertyPath: TypeOfInteractible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: df00b79705aee924886d1bc1b56e4bff, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: Paul The Progam Manager
@@ -9577,7 +9589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9780,6 +9792,10 @@ PrefabInstance:
       propertyPath: interactionDialog
       value: 
       objectReference: {fileID: 514361144}
+    - target: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
+      propertyPath: referenceInteraction
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a3aead06154dbb47933dc88f6b45a62, type: 2}
     - target: {fileID: 1991751261327976181, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_Name
       value: FreeHeal_Teapot
@@ -9794,7 +9810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9879,17 +9895,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1991751261327976182, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
   m_PrefabInstance: {fileID: 2116389257}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2116389259 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1890279452020796107, guid: 6d10a523a349cca47b60bece8a2b6a95, type: 3}
-  m_PrefabInstance: {fileID: 2116389257}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd59cef910926c343a37a9a6eb967e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8917713532221656548
 PrefabInstance:
   m_ObjectHideFlags: 0

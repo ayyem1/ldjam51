@@ -41,6 +41,7 @@ public class BattleDialog : MonoBehaviour
         }
         else
         {
+            GameInstance.Instance.Reset();
             SceneManager.LoadScene("StartScene");
         }
     }

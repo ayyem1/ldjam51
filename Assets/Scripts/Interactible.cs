@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interactible : MonoBehaviour
 {
     [SerializeField] private InteractionDialog interactionDialog;
+    public Image Icon;
+    public Button InteractibleButton;
+
     public enum InteractibleType
     {
         HealingItem,
@@ -10,10 +14,15 @@ public class Interactible : MonoBehaviour
         Entity
     }
 
-    public HealingItem HealingItem;
-    public Treasure TreasureItem;
-    public Entity EntityItem;
+    public enum State
+    {
+        NotUnlocked,
+        Unlocked,
+        Started,
+        Completed
+    }
 
+    public ScriptableObject referenceInteraction;
     public InteractibleType TypeOfInteractible;
 
     public void OnInteract()

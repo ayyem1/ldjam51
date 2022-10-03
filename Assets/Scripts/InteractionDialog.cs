@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEngine.EventSystems.EventTrigger;
 
@@ -15,53 +14,65 @@ public class InteractionDialog : MonoBehaviour
     private Interactible refInteractble;
     public void Initialize(Interactible interactible)
     {
+        GameInstance.Instance.SetInteractionToStarted(interactible.referenceInteraction.name);
         refInteractble = interactible;
         if (interactible.TypeOfInteractible == Interactible.InteractibleType.HealingItem)
         {
-            Title.text = interactible.HealingItem.Name;
-            Description.text = interactible.HealingItem.Description;
-            if (interactible.HealingItem.HealingPrice > 0)
+            HealingItem healingItem = (HealingItem)interactible.referenceInteraction;
+            Title.text = healingItem.Name;
+
+            if (healingItem.HealingPrice > 0)
             {
-                Description.text = $"{Description.text}\n\nCost: {interactible.HealingItem.HealingPrice} Corporate Bucks";
+                Description.text = $"{healingItem.Description}\n\nCost: {healingItem.HealingPrice} Corporate Bucks";
             }
-            Icon.sprite = interactible.HealingItem.Icon;
+            else
+            {
+                Description.text = healingItem.Description;
+            }
+
+            Icon.sprite = healingItem.Icon;
+
             if (GameInstance.Instance.MainPlayer.CurrentHp == GameInstance.Instance.MainPlayer.MaxHP)
             {
                 ButtonText.text = $"At Full Health";
                 ActionButton.interactable = false;
             }
-            else if (interactible.HealingItem.HealingPrice <= 0)
+            else if (healingItem.HealingPrice <= 0)
             {
                 ButtonText.text = "Collect";
                 ActionButton.interactable = true;
             }
             else
             {
-                if (GameInstance.Instance.MainPlayer.CurrentCorporateBucksAmount < interactible.HealingItem.HealingPrice)
+                if (GameInstance.Instance.MainPlayer.CurrentCorporateBucksAmount < healingItem.HealingPrice)
                 {
                     ButtonText.text = "Not Enough Bucks";
                     ActionButton.interactable = false;
                 }
                 else
                 {
-                    ButtonText.text = $"Purchase ({interactible.HealingItem.HealingPrice})";
+                    ButtonText.text = $"Purchase ({healingItem.HealingPrice})";
                     ActionButton.interactable = true;
                 }
             }
         }
         else if (interactible.TypeOfInteractible == Interactible.InteractibleType.Treasure)
         {
-            Title.text = interactible.TreasureItem.Name;
-            Description.text = $"{interactible.TreasureItem.Description}\n\nRewards:\nUnlocked A New Card!\nEarned {interactible.TreasureItem.GrantedCorporateBucks} Corporate Bucks";
-            Icon.sprite = interactible.TreasureItem.Icon;
+            Treasure treasureItem = (Treasure)interactible.referenceInteraction;
+
+            Title.text = treasureItem.Name;
+            Description.text = $"{treasureItem.Description}\n\nRewards:\nUnlocked A New Card!\nEarned {treasureItem.GrantedCorporateBucks} Corporate Bucks";
+            Icon.sprite = treasureItem.Icon;
             ButtonText.text = "Collect";
             ActionButton.interactable = true;
         }
         else
         {
-            Title.text = interactible.EntityItem.Name;
-            Description.text = interactible.EntityItem.StartingDialog;
-            Icon.sprite = interactible.EntityItem.EntitySprite;
+            Entity entityItem = (Entity)interactible.referenceInteraction;
+
+            Title.text = entityItem.Name;
+            Description.text = entityItem.StartingDialog;
+            Icon.sprite = entityItem.EntitySprite;
             ButtonText.text = "Ready";
             ActionButton.interactable = true;
         }
@@ -69,42 +80,71 @@ public class InteractionDialog : MonoBehaviour
 
     public void OnButtonPress()
     {
-        // TODO: Mark entities as interacted with so we don't allow redos.
         if (refInteractble.TypeOfInteractible == Interactible.InteractibleType.Entity)
         {
-            GameInstance.Instance.SelectedEntity = refInteractble.EntityItem;
-            GameInstance.Instance.Interactions.Add(refInteractble.gameObject.name);
-            SceneManager.LoadScene("BattleScene");
+            var entity = (Entity)refInteractble.referenceInteraction;
+            GameInstance.Instance.SetInteractionToCompleted(entity.name);
+            UpdateUnlockedInteractions();
+            GameInstance.Instance.StartBattle(entity);
         }
         else if (refInteractble.TypeOfInteractible == Interactible.InteractibleType.HealingItem)
         {
+            var healingItem = (HealingItem)refInteractble.referenceInteraction;
             var currentCorporateBucks = GameInstance.Instance.MainPlayer.CurrentCorporateBucksAmount;
             var currentHP = GameInstance.Instance.MainPlayer.CurrentHp;
-            if (currentCorporateBucks >= refInteractble.HealingItem.HealingPrice && currentHP < GameInstance.Instance.MainPlayer.MaxHP)
+            if (currentCorporateBucks >= healingItem.HealingPrice && currentHP < GameInstance.Instance.MainPlayer.MaxHP)
             {
-                GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(-refInteractble.HealingItem.HealingPrice);
-                GameInstance.Instance.MainPlayer.Heal(refInteractble.HealingItem.HealingAmount);
-                if (refInteractble.HealingItem.IsSingleUse)
-                {
-                    GameInstance.Instance.Interactions.Add(refInteractble.gameObject.name);
-                }
+                GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(-healingItem.HealingPrice);
+                GameInstance.Instance.MainPlayer.Heal(healingItem.HealingAmount);
+                GameInstance.Instance.SetInteractionToCompleted(healingItem.name);
+                UpdateUnlockedInteractions();
                 gameObject.SetActive(false);
             }
         }
         else
         {
-            GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(refInteractble.TreasureItem.GrantedCorporateBucks);
-            foreach (var card in refInteractble.TreasureItem.GrantedCards)
+            var treasureItem = (Treasure)refInteractble.referenceInteraction;
+            GameInstance.Instance.MainPlayer.ModifyCorporateBucksAmount(treasureItem.GrantedCorporateBucks);
+            foreach (var card in treasureItem.GrantedCards)
             {
                 if (card != null)
                 {
                     GameInstance.Instance.MainPlayer.AddCard(card);
                 }
             }
-            GameInstance.Instance.Interactions.Add(refInteractble.gameObject.name);
+            GameInstance.Instance.SetInteractionToCompleted(treasureItem.name);
+            UpdateUnlockedInteractions();
             gameObject.SetActive(false);
         }
 
+    }
+
+    private void UpdateUnlockedInteractions()
+    {
+        if (refInteractble.TypeOfInteractible == Interactible.InteractibleType.Entity)
+        {
+            var entity = (Entity)refInteractble.referenceInteraction;
+            foreach (var unlockedInteraction in entity.UnlockedInteractions)
+            {
+                GameInstance.Instance.SetInteractionToUnlocked(unlockedInteraction.name);
+            }
+        }
+        else if (refInteractble.TypeOfInteractible == Interactible.InteractibleType.HealingItem)
+        {
+            var healingItem = (HealingItem)refInteractble.referenceInteraction;
+            foreach (var unlockedInteraction in healingItem.UnlockedInteractions)
+            {
+                GameInstance.Instance.SetInteractionToUnlocked(unlockedInteraction.name);
+            }
+        }
+        else
+        {
+            var treasureItem = (Treasure)refInteractble.referenceInteraction;
+            foreach (var unlockedInteraction in treasureItem.UnlockedInteractions)
+            {
+                GameInstance.Instance.SetInteractionToUnlocked(unlockedInteraction.name);
+            }
+        }
     }
 
     public void OnClose()
