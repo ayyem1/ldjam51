@@ -1510,7 +1510,7 @@ PrefabInstance:
       objectReference: {fileID: 1884040977}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 25752311480078727, guid: a614ce19344ff924796e79cdc9f1e7d4, type: 3}
       propertyPath: UnlockedInteractionsAtStart.Array.data[0]
