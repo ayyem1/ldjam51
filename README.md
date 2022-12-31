@@ -6,6 +6,7 @@ FEATURES
 - Branching paths for player to take
 - Deck Builder system
 - Turn based battler system
+- Drag and drop logic for cards
 - Win/Lose dialogs
 
 INSTALLATION INSTRUCTIONS
